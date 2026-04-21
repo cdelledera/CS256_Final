@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Gilby
+  m_EditorClassIdentifier: 
+  characterName: Gilby
+  characterSprite: {fileID: 0}
+  dialoguePortrait: {fileID: 0}
+  characterAnimator: {fileID: 0}
+  perfectDrinks: 0b0000000e00000011000000
+  perfectEffect: 0
+  bounty: 150
+  acceptableCategories: 
+  acceptableEffect: 3
+  availableTopics:
+  - topicName: Your Order
+    topicDialogue: I want a drink that'll give me strength
+  reactionPerfect: Wow thanks!!
+  reactionOkay: um...ok
+  reactionFail: I am sad
