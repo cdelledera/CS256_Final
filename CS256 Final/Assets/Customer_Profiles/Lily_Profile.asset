@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Lily_Profile
+  m_EditorClassIdentifier: 
+  characterName: Lily
+  characterSprite: {fileID: 0}
+  dialoguePortrait: {fileID: 0}
+  characterAnimator: {fileID: 0}
+  perfectDrinks: 0a0000000d00000010000000
+  perfectEffect: 2
+  bounty: 100
+  acceptableCategories: 
+  acceptableEffect: 2
+  availableTopics:
+  - topicName: Your Order
+    topicDialogue: I want a drink with endurance.
+  reactionPerfect: Wow Thanks!!
+  reactionOkay: oh um...ok
+  reactionFail: I am Sad
