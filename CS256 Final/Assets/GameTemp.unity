@@ -119,6 +119,81 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &28005254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28005255}
+  - component: {fileID: 28005257}
+  - component: {fileID: 28005256}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &28005255
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28005254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 49.4, y: 49.4, z: 49.4}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1988819913}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 910, y: -458.97018}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &28005256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28005254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &28005257
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28005254}
+  m_CullTransparentMesh: 1
 --- !u!1 &56314488
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 56314489}
   - component: {fileID: 56314490}
+  - component: {fileID: 56314491}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -165,6 +241,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionsMenu: {fileID: 969092744}
   mainMenu: {fileID: 1147470551}
+--- !u!114 &56314491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56314488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f048da25f76153c43a7f2c845be0c35e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayDuration: 0.5
 --- !u!1 &195247078
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +752,7 @@ GameObject:
   - component: {fileID: 878803418}
   - component: {fileID: 878803417}
   m_Layer: 0
-  m_Name: 9277762
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1897,6 +1986,7 @@ GameObject:
   - component: {fileID: 1355954311}
   - component: {fileID: 1355954310}
   - component: {fileID: 1355954313}
+  - component: {fileID: 1355954314}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -1992,6 +2082,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1355954314}
+        m_TargetAssemblyTypeName: FadeIn, Assembly-CSharp
+        m_MethodName: fadeIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonControl, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1355954311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2042,8 +2156,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efce6f67e03531c45a4d885a48e0548a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startbtn: {fileID: 0}
+  startbtn: {fileID: 1355954313}
   tmptitle: {fileID: 0}
+--- !u!114 &1355954314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355954308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d05a1391e132a5247b99ca09f6b2df94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeSprite: {fileID: 28005256}
 --- !u!1 &1988819909
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,6 +2269,7 @@ RectTransform:
   - {fileID: 1188938242}
   - {fileID: 1147470552}
   - {fileID: 969092745}
+  - {fileID: 28005255}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

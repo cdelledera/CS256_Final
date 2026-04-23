@@ -2,7 +2,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 public class ButtonControl : MonoBehaviour
+   
 
 
 {
@@ -22,8 +24,11 @@ public class ButtonControl : MonoBehaviour
 
     }
 
+
+
     public void StartGame()
     {
+
         Debug.Log("Game Started");
     }
 
