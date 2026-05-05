@@ -1,14 +1,33 @@
 using UnityEngine;
+using TMPro;
+
+
+
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
+    [Header("UI References")]
+    public TextMeshProUGUI goldTextUI;
+    public TextMeshProUGUI timeTextUI; // NEW: The Clock and Calendar text
 
     [Header("Game State")]
     public bool isUIActive = false;
     public TimeOfDay currentTime = TimeOfDay.Morning;
     public int currentGold = 0;
     public int currentDay = 1;
+
+    [Header("Story Memory")]
+    public System.Collections.Generic.List<string> storyFlags = new System.Collections.Generic.List<string>();
+
+    // Call this to permanently remember a choice!
+    public void AddStoryFlag(string flag)
+    {
+        if (!storyFlags.Contains(flag)) storyFlags.Add(flag);
+    }
+
+    public LilyState lilyYesterday = LilyState.Any;
 
     [Header("Win Conditions")]
     public int maxDays = 7;
@@ -20,70 +39,83 @@ public class GameManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    // UPDATED: Now it cleanly accepts just the exact amount of gold earned!
+    void Start()
+    {
+        UpdateGoldUI();
+        UpdateTimeUI(); // NEW: Make sure the clock is right when the game starts!
+    }
+
     public void LogQuestResult(int goldEarned)
     {
-        if (goldEarned > 0)
-        {
-            currentGold += goldEarned;
-            Debug.Log($"LEDGER: SUCCESS! Earned {goldEarned}g. | Total Gold: {currentGold}");
-        }
-        else
-        {
-            Debug.Log($"LEDGER: FAILED. 0g earned. | Total Gold: {currentGold}");
-        }
+        if (goldEarned > 0) currentGold += goldEarned;
+        UpdateGoldUI();
     }
+
+    private void UpdateGoldUI()
+    {
+        if (goldTextUI != null) goldTextUI.text = "Gold: " + currentGold + "g";
+    }
+
+    // --- NEW: CLOCK AND CALENDAR LOGIC ---
 
     public void AdvanceTime()
     {
-        switch (currentTime)
+        // 1. Cycle through the times of day
+        if (currentTime == TimeOfDay.Morning)
         {
-            case TimeOfDay.Morning:
-                currentTime = TimeOfDay.Afternoon;
-                Debug.Log("Time shifted to Afternoon.");
-                Object.FindFirstObjectByType<CustomerSpawner>().SpawnNextCustomer();
-                break;
-
-            case TimeOfDay.Afternoon:
-                currentTime = TimeOfDay.Evening;
-                Debug.Log("Time shifted to Evening.");
-                Object.FindFirstObjectByType<CustomerSpawner>().SpawnNextCustomer();
-                break;
-
-            case TimeOfDay.Evening:
-                Debug.Log("The tavern is closing for the night...");
-                EndTheDay();
-                break;
+            currentTime = TimeOfDay.Afternoon;
         }
+        else if (currentTime == TimeOfDay.Afternoon)
+        {
+            currentTime = TimeOfDay.Evening;
+        }
+        else if (currentTime == TimeOfDay.Evening)
+        {
+            // 2. If the Evening is over, end the day!
+            EndTheDay();
+        }
+
+        // 3. Update the screen to show the new time!
+        UpdateTimeUI();
     }
 
     private void EndTheDay()
     {
-        Debug.Log($"--- END OF DAY {currentDay} ---");
+        currentTime = TimeOfDay.Morning; // Reset the clock
+        currentDay++; // Move to tomorrow
 
-        if (currentDay >= maxDays)
+        if (currentDay > maxDays)
         {
-            CheckWinCondition();
-            return;
+            // The deadline has arrived!
+            Debug.Log("THE WEEK IS OVER! Time to check if the player made enough gold...");
+            // (You can trigger your ending cutscene or win/lose screen here later!)
         }
-
-        currentDay++;
-        currentTime = TimeOfDay.Morning;
-
-        Debug.Log($"Starting Day {currentDay}! Current Bank: {currentGold}g");
-
-        Object.FindFirstObjectByType<CustomerSpawner>().SpawnNextCustomer();
     }
 
-    private void CheckWinCondition()
+    private void UpdateTimeUI()
     {
-        if (currentGold >= goalGold)
+        if (timeTextUI != null)
         {
-            Debug.Log($"VICTORY! You survived the week and paid off the Guild with {currentGold}g!");
+            string dayOfWeek = GetDayOfWeekName(currentDay);
+
+            // This formats it to look like: "Day 1 (Sunday) - Morning"
+            timeTextUI.text = $"({dayOfWeek}) - {currentTime}";
         }
-        else
+    }
+
+    // This converts the integer into a readable word
+    private string GetDayOfWeekName(int dayNumber)
+    {
+        switch (dayNumber)
         {
-            Debug.Log($"GAME OVER. You only made {currentGold}g out of {goalGold}g. The Guild shuts you down.");
+            case 1: return "Sunday";
+            case 2: return "Monday";
+            case 3: return "Tuesday";
+            case 4: return "Wednesday";
+            case 5: return "Thursday";
+            case 6: return "Friday";
+            case 7: return "Saturday";
+            default: return "Unknown Day";
         }
     }
 }

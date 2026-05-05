@@ -13,17 +13,19 @@ MonoBehaviour:
   m_Name: Gilby
   m_EditorClassIdentifier: 
   characterName: Gilby
-  characterSprite: {fileID: 0}
-  dialoguePortrait: {fileID: 0}
-  characterAnimator: {fileID: 0}
+  companion: {fileID: 0}
   perfectDrinks: 0b0000000e00000011000000
-  perfectEffect: 0
+  perfectEffect: 3
   bounty: 150
   acceptableCategories: 
   acceptableEffect: 3
   availableTopics:
   - topicName: Your Order
-    topicDialogue: I want a drink that'll give me strength
+    requiredLilyState: 0
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 0}
+      text: 
   reactionPerfect: Wow thanks!!
   reactionOkay: um...ok
   reactionFail: I am sad

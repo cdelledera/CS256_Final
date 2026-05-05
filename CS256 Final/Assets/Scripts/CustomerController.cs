@@ -1,6 +1,4 @@
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI; 
 
 public class CustomerController : MonoBehaviour
 {
@@ -11,80 +9,28 @@ public class CustomerController : MonoBehaviour
     public CharacterData myProfile;
     public PotionBrewing brewingSystem;
 
-    [Header("Visuals & Animation")]
-    public SpriteRenderer mySpriteRenderer;
-    public Animator myAnimator; 
+    // NEW: Tracks if the customer has said their opening line yet
+    [HideInInspector] public bool hasGreeted = false;
 
     [Header("Movement")]
     public float moveSpeed = 3f;
     public Transform doorLocation;
     public Transform counterLocation;
 
-    [Header("UI References")]
-    public Image dialoguePortraitUI; 
-    public GameObject topicMenuPanel;
-    public TextMeshProUGUI[] topicButtonTexts;
-    public GameObject dialoguePanel;
-    public TextMeshProUGUI dialogueTextUI;
-
-    private bool isReacting = false;
-
-    void Start()
-    {
-        // 1. Swap the physical body
-        if (myProfile.characterSprite != null && mySpriteRenderer != null)
-            mySpriteRenderer.sprite = myProfile.characterSprite;
-
-        // 2. Swap the Stardew Portrait
-        if (myProfile.dialoguePortrait != null && dialoguePortraitUI != null)
-            dialoguePortraitUI.sprite = myProfile.dialoguePortrait;
-
-        // 3. Swap the Animation file (so Joe walks differently than Lily)
-        if (myProfile.characterAnimator != null && myAnimator != null)
-            myAnimator.runtimeAnimatorController = myProfile.characterAnimator;
-
-        topicMenuPanel.SetActive(false);
-        dialoguePanel.SetActive(false);
-
-     
-        for (int i = 0; i < topicButtonTexts.Length; i++)
-        {
-            if (i < myProfile.availableTopics.Length)
-            {
-                topicButtonTexts[i].text = myProfile.availableTopics[i].topicName;
-                topicButtonTexts[i].transform.parent.gameObject.SetActive(true);
-            }
-            else
-            {
-                topicButtonTexts[i].transform.parent.gameObject.SetActive(false);
-            }
-        }
-    }
-
     void Update()
     {
         if (currentState == CustomerState.WalkingIn)
         {
-            // NEW: Tell the animator to start the walking loop!
-            if (myAnimator != null) myAnimator.SetBool("isWalking", true);
-
             transform.position = Vector2.MoveTowards(transform.position, counterLocation.position, moveSpeed * Time.deltaTime);
 
             if (Vector2.Distance(transform.position, counterLocation.position) < 0.1f)
             {
                 currentState = CustomerState.Waiting;
-
-                // NEW: Tell the animator to stop walking and stand idle!
-                if (myAnimator != null) myAnimator.SetBool("isWalking", false);
-
-                topicMenuPanel.SetActive(true);
+                // CHANGED: They now just stand there and wait for you to click them!
             }
         }
         else if (currentState == CustomerState.WalkingOut)
         {
-            // NEW: Start walking again!
-            if (myAnimator != null) myAnimator.SetBool("isWalking", true);
-
             transform.position = Vector2.MoveTowards(transform.position, doorLocation.position, moveSpeed * Time.deltaTime);
 
             if (Vector2.Distance(transform.position, doorLocation.position) < 0.1f)
@@ -93,80 +39,78 @@ public class CustomerController : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-
-        // ... (Keep the rest of Update and the other functions exactly the same!)
-        if (dialoguePanel.activeSelf)
-        {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))
-            {
-                AdvanceDialogue();
-            }
-        }
     }
 
-    private void AdvanceDialogue()
+    public void FinishTransaction()
     {
-        if (!isReacting)
+        currentState = CustomerState.WalkingOut;
+    }
+
+    // UPDATED: Now checks for a greeting before opening the Action Menu!
+    void OnMouseDown()
+    {
+        if (currentState != CustomerState.Waiting || GameManager.Instance.isUIActive) return;
+
+        // If they have a greeting written AND they haven't said it yet...
+        if (!hasGreeted && myProfile.greetingTopic != null && myProfile.greetingTopic.lines != null && myProfile.greetingTopic.lines.Length > 0)
         {
-            dialoguePanel.SetActive(false);
-            topicMenuPanel.SetActive(true);
-            GameManager.Instance.isUIActive = false;
+            hasGreeted = true;
+            DialogueManager.Instance.StartGreeting(this, myProfile.greetingTopic);
         }
         else
         {
-            GameManager.Instance.isUIActive = false;
-            dialoguePanel.SetActive(false);
-            currentState = CustomerState.WalkingOut;
+            // Otherwise, just open the regular Action Menu
+            DialogueManager.Instance.OpenActionMenu(this);
         }
     }
 
-    public void OnTopicClicked(int topicIndex)
+    // NEW: The manager calls this when you specifically click "Present"
+    public void ReceivePotion()
     {
-        if (currentState != CustomerState.Waiting) return;
-
-        topicMenuPanel.SetActive(false);
-        dialoguePanel.SetActive(true);
-        dialogueTextUI.text = myProfile.availableTopics[topicIndex].topicDialogue;
-        GameManager.Instance.isUIActive = true;
-    }
-
-    void OnMouseDown()
-    {
-        if (currentState != CustomerState.Waiting) return;
-
-        if (topicMenuPanel.activeSelf && brewingSystem.readyToServePotion != Potion.None)
+        // Ace Attorney Check: Do we actually have an item to present?
+        if (brewingSystem.readyToServePotion == Potion.None)
         {
-            Potion givenPotion = brewingSystem.readyToServePotion;
-            brewingSystem.readyToServePotion = Potion.None;
+            DialogueManager.Instance.ShowInnerMonologue("(I haven't brewed a potion to give them yet...)");
+            return;
+        }
 
-            DrinkCategory givenCategory = PotionBrewing.GetCategory(givenPotion);
-            MagicEffect givenEffect = PotionBrewing.GetPotionEffect(givenPotion);
+        // 1. Grab the drink and the effect directly from the cauldron's memory!
+        Potion givenPotion = brewingSystem.readyToServePotion;
+        MagicEffect givenEffect = brewingSystem.readyToServeEffect;
 
-            isReacting = true;
-            topicMenuPanel.SetActive(false);
-            dialoguePanel.SetActive(true);
-            GameManager.Instance.isUIActive = true;
+        // 2. Empty the cauldron!
+        brewingSystem.readyToServePotion = Potion.None;
+        brewingSystem.readyToServeEffect = MagicEffect.None;
 
-            // TIER 1: PERFECT MATCH (Check the List OR check the Effect!)
-            if (myProfile.perfectDrinks.Contains(givenPotion) ||
-               (myProfile.perfectEffect != MagicEffect.None && givenEffect == myProfile.perfectEffect))
+        // 3. Get the category (like Juice or Lemonade)
+        DrinkCategory givenCategory = PotionBrewing.GetCategory(givenPotion);
+
+        // --- NEW EVALUATION LOGIC ---
+        bool foundMatch = false;
+
+        // Check the list of reactions from top to bottom
+        foreach (ReactionBranch branch in myProfile.conditionalReactions)
+        {
+            // NEW LOGIC: Check if the drink they brewed exists inside ANY of the lists for this branch!
+            bool potionMatches = branch.requiredPotions.Contains(givenPotion);
+            bool effectMatches = branch.requiredEffects.Contains(givenEffect);
+            bool categoryMatches = branch.requiredCategories.Contains(givenCategory);
+
+            // If ANY of those conditions are met, trigger this branch!
+            if (potionMatches || effectMatches || categoryMatches)
             {
-                dialogueTextUI.text = myProfile.reactionPerfect;
-                GameManager.Instance.LogQuestResult(myProfile.bounty); // Full Gold
+                DialogueManager.Instance.ShowReaction(branch.reactionTopic);
+                GameManager.Instance.LogQuestResult(branch.goldReward);
+                foundMatch = true;
+                break; // Stop looking! We found the right reaction.
             }
-            // TIER 2: OKAY MATCH (Check Category OR Backup Effect)
-            else if (myProfile.acceptableCategories.Contains(givenCategory) ||
-                    (myProfile.acceptableEffect != MagicEffect.None && givenEffect == myProfile.acceptableEffect))
-            {
-                dialogueTextUI.text = myProfile.reactionOkay;
-                GameManager.Instance.LogQuestResult(myProfile.bounty / 2); // Half Gold
-            }
-            // TIER 3: FAIL
-            else
-            {
-                dialogueTextUI.text = myProfile.reactionFail;
-                GameManager.Instance.LogQuestResult(0); // 0 Gold
-            }
+        }
+
+        // If we checked the whole list and nothing matched, play the fail state
+        if (!foundMatch)
+        {
+            DialogueManager.Instance.ShowReaction(myProfile.defaultFailReaction);
+            GameManager.Instance.LogQuestResult(0); // 0 Gold for failing
         }
     }
 }

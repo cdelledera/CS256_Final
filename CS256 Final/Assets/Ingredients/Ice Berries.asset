@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Ice Berries
   m_EditorClassIdentifier: 
   ingredientName: Ice Berries
-  description: 
-  icon: {fileID: 0}
-  type: 1
+  description: Cold to the touch all year round. Eating one makes the world feel
+    like it's moving in slow motion.
+  icon: {fileID: -2651921789416729872, guid: cbb4eff87eec2cd4a851f650da6b9159, type: 3}
+  ingredientType: 8
   flavor: 0
-  effect: 1
+  effect: 2

@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e943278aeb67a4747b4aa0ac8aa4038d, type: 3}
-  m_Name: Blood Orange
+  m_Name: Pepper
   m_EditorClassIdentifier: 
-  ingredientName: Blood Orange
-  description: 
-  icon: {fileID: 0}
-  type: 1
-  flavor: 1
-  effect: 2
+  ingredientName: Pepper
+  description: A fiery, spicy red pepper. Handle with care, unless you want your
+    drinks to bite back."
+  icon: {fileID: 2708099430083492396, guid: 0b5d4bfe1de4cf64fa7263dcc094ff32, type: 3}
+  ingredientType: 2
+  flavor: 2
+  effect: 0

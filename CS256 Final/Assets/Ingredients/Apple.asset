@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: 
   ingredientName: Apple
-  description: 
-  icon: {fileID: 0}
-  type: 0
-  flavor: 1
+  description: Crisp, refreshing, very sweet. Just what the doctor ordered.
+  icon: {fileID: 7293598183456022363, guid: 96d30d70af3f3fd43b976a4f308b5185, type: 3}
+  ingredientType: 6
+  flavor: 6
   effect: 0
