@@ -1,0 +1,1014 @@
+fileFormatVersion: 2
+guid: 7f029fff62e90b141bd7a0146834d599
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8044883200900463787
+    second: Master_shadow_0
+  - first:
+      213: -5925538558070942791
+    second: Master_shadow_1
+  - first:
+      213: 5857449897165373623
+    second: Master_shadow_2
+  - first:
+      213: -6800464586746865199
+    second: Master_shadow_3
+  - first:
+      213: -915728158192677600
+    second: Master_shadow_4
+  - first:
+      213: -421124636881460252
+    second: Master_shadow_5
+  - first:
+      213: -4795186106092575647
+    second: Master_shadow_6
+  - first:
+      213: -433506701521753053
+    second: Master_shadow_7
+  - first:
+      213: -440529089306038786
+    second: Master_shadow_8
+  - first:
+      213: 9062358996726421527
+    second: Master_shadow_9
+  - first:
+      213: -3402949008868897904
+    second: Master_shadow_10
+  - first:
+      213: 5087772791212542235
+    second: Master_shadow_11
+  - first:
+      213: -4246721892109239538
+    second: Master_shadow_12
+  - first:
+      213: 2772500485933825672
+    second: Master_shadow_13
+  - first:
+      213: -899674660297392648
+    second: Master_shadow_14
+  - first:
+      213: 3587560557662585129
+    second: Master_shadow_15
+  - first:
+      213: 6566969254104547134
+    second: Master_shadow_16
+  - first:
+      213: 6674547946193725696
+    second: Master_shadow_17
+  - first:
+      213: -1594848840836782514
+    second: Master_shadow_18
+  - first:
+      213: 7773404705573266067
+    second: Master_shadow_19
+  - first:
+      213: 5208318470902886793
+    second: Master_shadow_20
+  - first:
+      213: 5722004635341520149
+    second: Master_shadow_21
+  - first:
+      213: 7788014078507931335
+    second: Master_shadow_22
+  - first:
+      213: -2835590016323442818
+    second: Master_shadow_23
+  - first:
+      213: 7596152778903251025
+    second: Master_shadow_24
+  - first:
+      213: 6465914875396566274
+    second: Master_shadow_25
+  - first:
+      213: 6519554815680549232
+    second: Master_shadow_26
+  - first:
+      213: -305775192846580727
+    second: Master_shadow_27
+  - first:
+      213: 3754905309681016267
+    second: Master_shadow_28
+  - first:
+      213: 2719823856646951330
+    second: Master_shadow_29
+  - first:
+      213: -5929677465664712875
+    second: Master_shadow_30
+  - first:
+      213: -2669447422827743559
+    second: Master_shadow_31
+  - first:
+      213: -7240005303894753511
+    second: Master_shadow_32
+  - first:
+      213: 752106887259716551
+    second: Master_shadow_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Master_shadow_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 171
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bacfd29c5aa25af60800000000000000
+      internalID: 8044883200900463787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 171
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b31d47831244cda0800000000000000
+      internalID: -5925538558070942791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_2
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 171
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0c03ab5a7d94150800000000000000
+      internalID: 5857449897165373623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_3
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 171
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d9545f1d75ef91a0800000000000000
+      internalID: -6800464586746865199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_4
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 175
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02d4a14871eaa43f0800000000000000
+      internalID: -915728158192677600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_5
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 155
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3e38cbf5dd72af0800000000000000
+      internalID: -421124636881460252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_6
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 155
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 164a67a74a3147db0800000000000000
+      internalID: -4795186106092575647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 155
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c6b08a3ffdbf9f0800000000000000
+      internalID: -433506701521753053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_8
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 155
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdefa6902de2e9f0800000000000000
+      internalID: -440529089306038786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_9
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 155
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71891fa3e77f3cd70800000000000000
+      internalID: 9062358996726421527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_10
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 130
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b0a91f7eb46c0d0800000000000000
+      internalID: -3402949008868897904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_11
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 134
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b190f1eb5666b9640800000000000000
+      internalID: 5087772791212542235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_12
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 135
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b34f070fc9015c0800000000000000
+      internalID: -4246721892109239538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_13
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 134
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88efeaba086e97620800000000000000
+      internalID: 2772500485933825672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_14
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 135
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fdbd83c9a6b383f0800000000000000
+      internalID: -899674660297392648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_15
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 107
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9214ea9c15399c130800000000000000
+      internalID: 3587560557662585129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_16
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 107
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3f30d94ebf822b50800000000000000
+      internalID: 6566969254104547134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_17
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 107
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 009a0396ef1c0ac50800000000000000
+      internalID: 6674547946193725696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_18
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 107
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e46ea7bdd65fdd9e0800000000000000
+      internalID: -1594848840836782514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_19
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 107
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3926b0bf46ea0eb60800000000000000
+      internalID: 7773404705573266067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_20
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 81
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 981b54fed0aa74840800000000000000
+      internalID: 5208318470902886793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 72
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51d7bac36e4a86f40800000000000000
+      internalID: 5722004635341520149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_22
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 72
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c6d43faa85941c60800000000000000
+      internalID: 7788014078507931335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_23
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 72
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e77a56c57e5f5a8d0800000000000000
+      internalID: -2835590016323442818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_24
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 72
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158ef1ec4b4fa6960800000000000000
+      internalID: 7596152778903251025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_25
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 59
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20d2def325b8bb950800000000000000
+      internalID: 6465914875396566274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_26
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 59
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0719352109c1a7a50800000000000000
+      internalID: 6519554815680549232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_27
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 59
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904c049051ba1cbf0800000000000000
+      internalID: -305775192846580727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_28
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 59
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcdd3cc1c7a1c1430800000000000000
+      internalID: 3754905309681016267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_29
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 59
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a1131b2361ceb520800000000000000
+      internalID: 2719823856646951330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_30
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 27
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55f8a6203cd85bda0800000000000000
+      internalID: -5929677465664712875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_31
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 28
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b635c756b734fad0800000000000000
+      internalID: -2669447422827743559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_32
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 11
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91fb8690985568b90800000000000000
+      internalID: -7240005303894753511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Master_shadow_33
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 11
+        width: 53
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cb7d38aa35007a00800000000000000
+      internalID: 752106887259716551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Master_shadow_0: 8044883200900463787
+      Master_shadow_1: -5925538558070942791
+      Master_shadow_10: -3402949008868897904
+      Master_shadow_11: 5087772791212542235
+      Master_shadow_12: -4246721892109239538
+      Master_shadow_13: 2772500485933825672
+      Master_shadow_14: -899674660297392648
+      Master_shadow_15: 3587560557662585129
+      Master_shadow_16: 6566969254104547134
+      Master_shadow_17: 6674547946193725696
+      Master_shadow_18: -1594848840836782514
+      Master_shadow_19: 7773404705573266067
+      Master_shadow_2: 5857449897165373623
+      Master_shadow_20: 5208318470902886793
+      Master_shadow_21: 5722004635341520149
+      Master_shadow_22: 7788014078507931335
+      Master_shadow_23: -2835590016323442818
+      Master_shadow_24: 7596152778903251025
+      Master_shadow_25: 6465914875396566274
+      Master_shadow_26: 6519554815680549232
+      Master_shadow_27: -305775192846580727
+      Master_shadow_28: 3754905309681016267
+      Master_shadow_29: 2719823856646951330
+      Master_shadow_3: -6800464586746865199
+      Master_shadow_30: -5929677465664712875
+      Master_shadow_31: -2669447422827743559
+      Master_shadow_32: -7240005303894753511
+      Master_shadow_33: 752106887259716551
+      Master_shadow_4: -915728158192677600
+      Master_shadow_5: -421124636881460252
+      Master_shadow_6: -4795186106092575647
+      Master_shadow_7: -433506701521753053
+      Master_shadow_8: -440529089306038786
+      Master_shadow_9: 9062358996726421527
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/GameTemp.unity
     guid: b2d3ded9675c68449ac945a3f703aacd
   - enabled: 1
+    path: Assets/Scenes/potionlogic.unity
+    guid: 58e730feea4b8d74aa543b8fbffc5174
+  - enabled: 0
     path: Assets/Scenes/Test.unity
     guid: 054ce9eb89c5bba498bcf10078a731b8
   m_configObjects:
