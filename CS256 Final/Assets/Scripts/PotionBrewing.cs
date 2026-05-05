@@ -4,6 +4,7 @@ using System.Text.RegularExpressions;
 
 public enum DrinkCategory
 {
+    None,
     Juice,
     Lemonade,
     Cider,
@@ -14,112 +15,110 @@ public enum DrinkCategory
 
 public class PotionBrewing : MonoBehaviour
 {
-    // 1. CHANGED: Now the pot holds the data files, not the old enum!
     public List<IngredientData> currentIngredients = new List<IngredientData>();
+
     public Potion readyToServePotion = Potion.None;
+    // NEW: We now track the effect directly in the cauldron based on the fruit used!
+    public MagicEffect readyToServeEffect = MagicEffect.None;
 
     public void AddIngredient(IngredientData item) { currentIngredients.Add(item); }
 
     public Potion Brew()
     {
-        // 2. THE NEW MATH: We count the attributes instead of the names!
-        int sweetBases = CountFlavor(Flavor.Sweet);
-        int sourBases = CountFlavor(Flavor.Sour);
-        int tartBases = CountFlavor(Flavor.Tart);
+        if (currentIngredients.Count == 0) return readyToServePotion = Potion.None;
 
-        int frostSpecials = CountEffect(MagicEffect.Frost);
-        int enduranceSpecials = CountEffect(MagicEffect.Endurance);
-        int strengthSpecials = CountEffect(MagicEffect.Strength);
+        // 1. EXTRACT THE MAGIC EFFECT
+        // Look at every fruit in the pot. If one has magic, the final drink gets that magic!
+        readyToServeEffect = MagicEffect.None;
+        foreach (IngredientData item in currentIngredients)
+        {
+            if (item.effect != MagicEffect.None)
+            {
+                readyToServeEffect = item.effect;
+            }
+        }
 
-        int totalBases = sweetBases + sourBases + tartBases;
-        int totalSpecials = frostSpecials + enduranceSpecials + strengthSpecials;
+        // 2. EXTRACT THE INGREDIENT NAMES 
+        // This grabs just the name of the fruit (e.g., "Apple") so checking recipes is easier
+        List<Ingredient> items = new List<Ingredient>();
+        foreach (IngredientData data in currentIngredients)
+        {
+            items.Add(data.ingredientType); // Ensure your IngredientData script has a variable called ingredientType!
+        }
 
+        Potion brewed = Potion.Slop;
+
+        // --- SINGLE INGREDIENT RECIPES ---
+        if (items.Count == 1)
+        {
+            Ingredient i = items[0];
+            if (i == Ingredient.Lemon || i == Ingredient.PurpleLemon || i == Ingredient.HeartLemon) brewed = Potion.Lemonade;
+            else if (i == Ingredient.Apple || i == Ingredient.GoldenApple) brewed = Potion.AppleJuice;
+            else if (i == Ingredient.Pepper) brewed = Potion.HotSauce;
+            else if (i == Ingredient.DragonFruit || i == Ingredient.MagicDragonFruit) brewed = Potion.DragonJuice;
+            else if (i == Ingredient.Cherry || i == Ingredient.IceCherries) brewed = Potion.CherryJuice;
+            else if (i == Ingredient.Pineapple) brewed = Potion.PineappleJuice;
+        }
+        // --- TWO INGREDIENT MIXES ---
+        else if (items.Count == 2)
+        {
+            // Grouping the regular fruit with their magical variants so either works for the recipe!
+            bool lemon = HasGroup(items, Ingredient.Lemon, Ingredient.PurpleLemon, Ingredient.HeartLemon);
+            bool dragon = HasGroup(items, Ingredient.DragonFruit, Ingredient.MagicDragonFruit, Ingredient.None);
+            bool apple = HasGroup(items, Ingredient.Apple, Ingredient.GoldenApple, Ingredient.None);
+            bool cherry = HasGroup(items, Ingredient.Cherry, Ingredient.IceCherries, Ingredient.None);
+
+            bool pepper = items.Contains(Ingredient.Pepper);
+            bool pineapple = items.Contains(Ingredient.Pineapple);
+
+            // Checking the exact combos from your Document
+            if (lemon && dragon) brewed = Potion.PinkLemonade;
+            else if (lemon && pepper) brewed = Potion.HellInAGlass;
+            else if (apple && pepper) brewed = Potion.SweetAndSpicy;
+            else if (pineapple && apple) brewed = Potion.PPAP;
+
+            // The two secret drinks from Rachel's dialogue (I assigned them logic so they work!)
+            else if (apple && cherry) brewed = Potion.AutumnChapple;
+            else if (dragon && pineapple) brewed = Potion.DragonKing;
+        }
+
+        // Empty the pot and serve!
         currentIngredients.Clear();
-
-        if (totalBases == 0 && totalSpecials > 0) return readyToServePotion = Potion.ToxicSludge;
-
-        if (totalSpecials == 0)
-        {
-            if (sweetBases > 0 && sourBases > 0) return readyToServePotion = Potion.AppleLemonade;
-            if (sweetBases > 0 && tartBases > 0) return readyToServePotion = Potion.OrchardBlend;
-            if (sourBases > 0 && tartBases > 0) return readyToServePotion = Potion.CitrusCrush;
-
-            if (sweetBases > 0) return readyToServePotion = Potion.AppleJuice;
-            if (sourBases > 0) return readyToServePotion = Potion.SourLemonade;
-            if (tartBases > 0) return readyToServePotion = Potion.GrapeJuice;
-        }
-        else if (sweetBases > 0 && sourBases == 0 && tartBases == 0)
-        {
-            if (frostSpecials > 0) return readyToServePotion = Potion.ChilledCider;
-            if (enduranceSpecials > 0) return readyToServePotion = Potion.SunsetCider;
-            if (strengthSpecials > 0) return readyToServePotion = Potion.DragonbreathCider;
-        }
-        else if (sourBases > 0 && sweetBases == 0 && tartBases == 0)
-        {
-            if (frostSpecials > 0) return readyToServePotion = Potion.FrostbiteLemonade;
-            if (enduranceSpecials > 0) return readyToServePotion = Potion.BloodLemonade;
-            if (strengthSpecials > 0) return readyToServePotion = Potion.SpicyLemonade;
-        }
-        else if (tartBases > 0 && sweetBases == 0 && sourBases == 0)
-        {
-            if (frostSpecials > 0) return readyToServePotion = Potion.GlacierCrush;
-            if (enduranceSpecials > 0) return readyToServePotion = Potion.CrimsonSangria;
-            if (strengthSpecials > 0) return readyToServePotion = Potion.WyvernWine;
-        }
-
-        return readyToServePotion = Potion.WildTavernMash;
+        readyToServePotion = brewed;
+        return readyToServePotion;
     }
 
-    // 3. THE NEW HELPERS: These check the data files for their specific tags
-    private int CountFlavor(Flavor flavorToFind)
+    // Helper function to check if the pot has either the normal OR magical version of a fruit
+    private bool HasGroup(List<Ingredient> items, Ingredient normal, Ingredient special1, Ingredient special2)
     {
-        int count = 0;
-        foreach (IngredientData item in currentIngredients)
-        {
-            if (item.flavor == flavorToFind) count++;
-        }
-        return count;
+        return items.Contains(normal) || items.Contains(special1) || items.Contains(special2);
     }
 
-    private int CountEffect(MagicEffect effectToFind)
-    {
-        int count = 0;
-        foreach (IngredientData item in currentIngredients)
-        {
-            if (item.effect == effectToFind) count++;
-        }
-        return count;
-    }
-
-    // --- REMAINS UNCHANGED ---
+    // --- DRINK CATEGORIES UPDATED ---
     public static DrinkCategory GetCategory(Potion potion)
     {
         switch (potion)
         {
-            case Potion.SourLemonade:
-            case Potion.AppleLemonade:
-            case Potion.FrostbiteLemonade:
-            case Potion.BloodLemonade:
-            case Potion.SpicyLemonade:
+            case Potion.Lemonade:
+            case Potion.PinkLemonade:
+            case Potion.HellInAGlass:
                 return DrinkCategory.Lemonade;
 
-            case Potion.ChilledCider:
-            case Potion.SunsetCider:
-            case Potion.DragonbreathCider:
+            case Potion.AutumnChapple:
+            case Potion.SweetAndSpicy:
                 return DrinkCategory.Cider;
 
-            case Potion.GrapeJuice:
-            case Potion.CrimsonSangria:
-            case Potion.WyvernWine:
-            case Potion.GlacierCrush:
+            case Potion.DragonKing:
                 return DrinkCategory.Wine;
 
             case Potion.AppleJuice:
-            case Potion.OrchardBlend:
-            case Potion.CitrusCrush:
+            case Potion.DragonJuice:
+            case Potion.CherryJuice:
+            case Potion.PineappleJuice:
                 return DrinkCategory.Juice;
 
-            case Potion.WildTavernMash:
+            case Potion.PPAP:
+            case Potion.HotSauce:
                 return DrinkCategory.Mash;
 
             default:
@@ -133,29 +132,5 @@ public class PotionBrewing : MonoBehaviour
         return Regex.Replace(potion.ToString(), "([a-z])([A-Z])", "$1 $2");
     }
 
-    // --- NEW: THE EFFECT CLASSIFIER ---
-    // This tells the game what magic effect is inside the finished drink
-    public static MagicEffect GetPotionEffect(Potion potion)
-    {
-        switch (potion)
-        {
-            case Potion.ChilledCider:
-            case Potion.FrostbiteLemonade:
-            case Potion.GlacierCrush:
-                return MagicEffect.Frost;
-
-            case Potion.SunsetCider:
-            case Potion.BloodLemonade:
-            case Potion.CrimsonSangria:
-                return MagicEffect.Endurance;
-
-            case Potion.DragonbreathCider:
-            case Potion.SpicyLemonade:
-            case Potion.WyvernWine:
-                return MagicEffect.Strength;
-
-            default:
-                return MagicEffect.None; // Juices, pure bases, and sludge have no magic!
-        }
-    }
+    // NOTE: GetPotionEffect() was deleted! We don't need it because the Cauldron tracks the effect now.
 }

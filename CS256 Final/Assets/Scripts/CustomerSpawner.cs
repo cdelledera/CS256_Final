@@ -16,19 +16,32 @@ public class CustomerSpawner : MonoBehaviour
 
     public PotionBrewing cauldron;
 
+    // --- NEW: Track whoever is currently inside! ---
+    private GameObject currentActiveCustomer;
+
     void Start()
     {
         SpawnNextCustomer();
+    }
+
+    void Update()
+    {
+        // --- NEW: The Bouncer Logic ---
+        // If the active customer disappeared (left the tavern) AND there are people left in line...
+        if (currentActiveCustomer == null && currentCustomerIndex < dailyCustomers.Count)
+        {
+            SpawnNextCustomer();
+        }
     }
 
     public void SpawnNextCustomer()
     {
         if (currentCustomerIndex < dailyCustomers.Count)
         {
-            // 1. Spawn them AT THE DOOR
-            GameObject newCustomer = Instantiate(customerPrefab, doorLocation.position, Quaternion.identity);
+            // 1. Spawn them AT THE DOOR and save them as the active customer
+            currentActiveCustomer = Instantiate(customerPrefab, doorLocation.position, Quaternion.identity);
 
-            CustomerController controller = newCustomer.GetComponent<CustomerController>();
+            CustomerController controller = currentActiveCustomer.GetComponent<CustomerController>();
 
             // 2. Hand them their profile and map
             controller.myProfile = dailyCustomers[currentCustomerIndex];

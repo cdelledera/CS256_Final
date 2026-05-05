@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Dragon Fruit
   m_EditorClassIdentifier: 
   ingredientName: Dragon Fruit
-  description: 
-  icon: {fileID: 0}
-  type: 1
+  description: '"A striking pink fruit with a surprisingly subtle, melon-like flavor."'
+  icon: {fileID: 1787258112049569629, guid: ce0a09de0cde21549ae8e8153346ffa3, type: 3}
+  ingredientType: 4
   flavor: 4
-  effect: 3
+  effect: 0

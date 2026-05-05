@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e943278aeb67a4747b4aa0ac8aa4038d, type: 3}
-  m_Name: Grapes
+  m_Name: Water Melon
   m_EditorClassIdentifier: 
-  ingredientName: Grapes
-  description: 
-  icon: {fileID: 0}
-  type: 0
-  flavor: 3
-  effect: 0
+  ingredientName: Water Melon
+  description: Get it? Staring into its reflection brings visions, clarity, and intense
+    pondering.
+  icon: {fileID: -6008512694714618504, guid: 8f09eb8d7ef6b814480820a4026ad905, type: 3}
+  ingredientType: 11
+  flavor: 0
+  effect: 5

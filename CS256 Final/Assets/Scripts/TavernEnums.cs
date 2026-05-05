@@ -1,45 +1,67 @@
 public enum Ingredient
 {
     None,
-    Apple,
+
+    // --- REGULAR FRUIT (Flavors) ---
     Lemon,
-    Grapes,
-  
-    Iceberries,
-    BloodOrange,
-    Dragonfruit
+    Pepper,
+    Pineapple,
+    DragonFruit,
+    Cherry,
+    Apple,
+
+    // --- SPECIAL FRUIT (Magic Effects) ---
+    PurpleLemon,
+    IceCherries,
+    GoldenApple,
+    MagicDragonFruit, // Added "Magic" so it doesn't conflict with regular Dragon Fruit
+    Watermelon,
+    StarFruit,
+
+    // --- STORY ITEMS ---
+    HeartLemon // Mentioned in Joe's final anniversary ending
 }
 
 public enum Potion
 {
     None,
-    ToxicSludge,      
-    WildTavernMash,  
+    Slop, 
 
-    // 1. The Pure Bases
-    AppleJuice,
-    SourLemonade,
-    GrapeJuice,
+    // --- SINGLE INGREDIENT DRINKS ---
+    Lemonade,       // Lemon
+    AppleJuice,     // Apple
+    HotSauce,       // Pepper
+    DragonJuice,    // Dragonfruit
+    CherryJuice,    // Cherry
+    PineappleJuice, // Pineapple
 
-    // 2. The Mixed Bases
-    AppleLemonade,
-    OrchardBlend,     // Apple + Grapes
-    CitrusCrush,      // Lemon + Grapes
+    // --- MIXED DRINKS ---
+    PinkLemonade,   // Lemon + Dragonfruit
+    HellInAGlass,   // Lemon + Pepper
+    SweetAndSpicy,  // Apple + Pepper
+    PPAP,           // Pineapple + Apple
 
-    // 3. Apple + Specials
-    ChilledCider,         // Apple + Ice
-    SunsetCider,          // Apple + Blood Orange
-    DragonbreathCider,    // Apple + Dragonfruit
+    // --- SECRET / STORY DRINKS ---
+    AutumnChapple,  // Rachel asks for this if she only gets slop
+    DragonKing      // Rachel mentions this on Day 2
+}
 
-    // 4. Lemon + Specials
-    FrostbiteLemonade,    // Lemon + Ice
-    BloodLemonade,        // Lemon + Blood Orange
-    SpicyLemonade,        // Lemon + Dragonfruit
+// NEW: To track the flavors of the fruit
+public enum DrinkFlavor
+{
+    None,
+    Sour,
+    Spicy,
+    Tart,
+    Subtle,
+    Bitter,
+    Sweet
+}
 
-    // 5. Grapes + Specials
-    GlacierCrush,         // Grapes + Ice
-    CrimsonSangria,       // Grapes + Blood Orange
-    WyvernWine            // Grapes + Dragonfruit
+// NEW: To track the magic effects of the special fruit
+public enum MagicEffect
+{
+    None, Endurance, Speed, Healing, Strength, Pondering, Charisma
 }
 
 public enum TimeOfDay
@@ -47,4 +69,9 @@ public enum TimeOfDay
     Morning,
     Afternoon,
     Evening
+}
+
+public enum LilyState
+{
+    Any, Sober, DrunkWin, DrunkLose
 }

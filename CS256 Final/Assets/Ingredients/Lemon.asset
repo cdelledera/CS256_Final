@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Lemon
   m_EditorClassIdentifier: 
   ingredientName: Lemon
-  description: 
-  icon: {fileID: 0}
-  type: 0
-  flavor: 2
+  description: '"A perfectly ordinary, incredibly sour lemon. Guaranteed to make
+    your lips pucker."'
+  icon: {fileID: 8025649199667744028, guid: 1de4688778a99314ea9b4060b1885e66, type: 3}
+  ingredientType: 1
+  flavor: 1
   effect: 0
