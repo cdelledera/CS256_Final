@@ -12,14 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  characterName: TavernKeeper
+  characterName: Pookie the Bartender
   companion: {fileID: 0}
-  perfectDrinks: 
-  perfectEffect: 0
-  bounty: 0
-  acceptableCategories: 
-  acceptableEffect: 0
+  greetingTopic:
+    topicName: 
+    requiredLilyState: 0
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines: []
   availableTopics: []
-  reactionPerfect: 
-  reactionOkay: 
-  reactionFail: 
+  conditionalReactions: []
+  defaultFailReaction:
+    topicName: 
+    requiredLilyState: 0
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines: []

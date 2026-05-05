@@ -133,9 +133,9 @@ MonoBehaviour:
       - speaker: {fileID: 11400000}
         text: "You would be right. Here\u2019s your tip."
   - branchName: Spicy Stuff
-    requiredPotions: 
+    requiredPotions: 0900000004000000
     requiredEffects: 
-    requiredCategories: 05000000
+    requiredCategories: 
     goldReward: 100
     reactionTopic:
       topicName: Spicy
@@ -150,7 +150,7 @@ MonoBehaviour:
         text: "Well, I should\u2019ve expected this. Bottoms up!"
       - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: I have no idea how you do it.
-      - speaker: {fileID: 0}
+      - speaker: {fileID: 11400000}
         text: "I\u2019ve been eating spicy stuff since I was a kid. This is nothing."
   defaultFailReaction:
     topicName: Thanks!
