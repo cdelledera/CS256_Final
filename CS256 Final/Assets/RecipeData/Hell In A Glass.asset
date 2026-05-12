@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537e1dc1cbbd7e24297df6806b395289, type: 3}
+  m_Name: Hell In A Glass
+  m_EditorClassIdentifier: 
+  potionName: Hell In A Glass
+  potionSprite: {fileID: -4499918125607724516, guid: 3c8822e0870264640b970f153193275d, type: 3}
+  recipeDescription: 'If you wanna die, this drink is for you!
+
+    Two Ingredients:
+
+    Lemon
+    + Pepper'

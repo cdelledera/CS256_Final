@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537e1dc1cbbd7e24297df6806b395289, type: 3}
+  m_Name: CrimsonWyrm
+  m_EditorClassIdentifier: 
+  potionName: CrimsonWyrm
+  potionSprite: {fileID: -2800330342511436272, guid: cf7716d13bbfd874b8ca97d9d9d0c88f, type: 3}
+  recipeDescription: 'Two Ingredients:
+
+    Cherry + Dragonfruit'

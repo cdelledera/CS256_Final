@@ -1,0 +1,443 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Lily_Day4
+  m_EditorClassIdentifier: 
+  characterName: Lily
+  defaultPortrait: {fileID: 0}
+  companion: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+  greetingTopic:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines: []
+  conditionalGreetings:
+  - topicName: Greeting(PONDERED)
+    requiredDay: 0
+    requiredStoryFlag: Lily_Pondered
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "Alright, I finally found out what I\u2019m going to do to fix all of
+        our problems."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Well that\u2019s a strong start, what do you have going on... also,
+        hi Joe."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: "Hi... what\u2019s happening?"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Don\u2019t worry about it."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: Alrighty then.
+      effect: 0
+      bonusGold: 0
+  - topicName: Greeting(NOT PONDERED)
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: Lily_Pondered
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Heya...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Hello!
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Hey, how are you guys?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Pretty bad...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: "I\u2019m doing alright myself. I\u2019m sorry to hear that, ma\u2019am."
+      effect: 0
+      bonusGold: 0
+  availableTopics:
+  - topicName: So, Lily, what's going on?
+    requiredDay: 0
+    requiredStoryFlag: Lily_Pondered
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "I am going to start up a new adventurer\u2019s guild! That\u2019ll show
+        those birds who\u2019s boss."
+      effect: 3
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: ... Elaborate.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "What\u2019s there to elaborate on?"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: The old guild halted every commission; we need people out there actually
+        helping again.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: Oh that sounds great! In fact, I really need some help at the moment...
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Well... first I need to get the thing started, maybe give me a day or
+        two.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: Ah, that's fair
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Well it sounds like you have a good idea. How are you going to do it?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "I\u2019ll need to actually get people on board first. Once I\u2019m
+        done here, I'm going door to door."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Jeez...Good Luck.
+      effect: 0
+      bonusGold: 0
+  - topicName: What's up Joe?
+    requiredDay: 0
+    requiredStoryFlag: Lily_Pondered
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: Not too much. A pretty large branch got caught up in my irrigation system
+        so that sucks.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Oh that\u2019s horrible."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: "Yeah, I tried taking it out myself, but it\u2019s a bit too heavy."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Man I'm sorry to hear that. If I wasn\u2019t so busy after this, I\u2019d
+        go help out."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: "It\u2019s alright. I\u2019ll give it another shot tonight."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: "\u201CIf I can\u2019t pick it up myself, I\u2019ll just need to pay
+        a couple people for help tomorrow."
+      effect: 0
+      bonusGold: 0
+  - topicName: So, what can I get you guys?
+    requiredDay: 0
+    requiredStoryFlag: Lily_Pondered
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: What's up Joe?
+    lines:
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: A Pink Lemonade would be nice about now.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Get me a dragonblaze smoothie.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Coming right up.
+      effect: 0
+      bonusGold: 0
+  - topicName: So, Lily, what's going on?
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: Lily_Pondered
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "I got fined hard for the fight the other day... Rent went up too; I
+        don\u2019t think I can make it up."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Oh... I\u2019m sorry to hear that. I\u2019d let you work here, but you
+        know I can barely hold myself up."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I know... Hopefully I can do some odd favors, clean up after the lack
+        of a guild.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "It\u2019s not a permanent solution but it\u2019ll buy be another month."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "I\u2019m sure you\u2019ll find some people who need help."
+      effect: 0
+      bonusGold: 0
+  - topicName: What's up, Joe?
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: Lily_Pondered
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: Not too much. A pretty large branch got caught up in my irrigation system
+        so that sucks.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Oh that\u2019s horrible."
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: "Yeah, I tried taking it out myself, but it\u2019s a bit too heavy."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "If you\u2019d like, I can give it a shot... I need some work"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: "That would be wonderful! I promise I\u2019ll pay generously for your
+        kindness."
+      effect: 0
+      bonusGold: 0
+  - topicName: So, what can I get you guys?
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: Lily_Pondered
+    requiredPreviousTopic: 
+    flagToSet: What's up, Joe?
+    lines:
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: A Pink Lemonade would be nice about now.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "I really can\u2019t afford anything, I just wanted to say hi."
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: "I\u2019ll pay for you. Our bartender here deserves the business and
+        you deserve something to drink."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "... I\u2019ll have some cherry juice then. Thank you."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Coming right up.
+      effect: 0
+      bonusGold: 0
+  conditionalReactions:
+  - branchName: Joe (Pink Lemonade)
+    requiredPotions: 08000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlag: 
+    excludedStoryFlag: Joe_Served
+    goldReward: 0
+    reactionTopic:
+      topicName: Joe Pink Lemonade
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: Joe_Served
+      lines:
+      - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+        text: Thanks Pookie!
+        effect: 1
+        bonusGold: 200
+    endInteraction: 0
+  - branchName: Joe (ANYTHING ELSE)
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlag: 
+    excludedStoryFlag: Joe_Served
+    goldReward: 100
+    reactionTopic:
+      topicName: Joe (ANYTHING ELSE)
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: Joe_Served
+      lines:
+      - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+        text: Oh...uh ok? Thanks Pookie.
+        effect: 1
+        bonusGold: 0
+    endInteraction: 0
+  - branchName: Lily (DRAGONBLAZE SMOOTHIE + Charisma)
+    requiredPotions: 13000000
+    requiredEffects: 06000000
+    requiredFlavors: 
+    requiredStoryFlag: Lily_Pondered
+    excludedStoryFlag: 
+    goldReward: 200
+    reactionTopic:
+      topicName: Lily (DRAGONBLAZE SMOOTHIE + Charisma)
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: Lily_Charisma
+      lines:
+      - speaker: {fileID: 11400000}
+        text: "Man this is good... makes me feel ready too! I\u2019ll see you guys
+          later.\r\n"
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Bye!
+        effect: 1
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: Lily (DRAGONBLAZE SMOOTHIE + Regular)
+    requiredPotions: 13000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlag: Lily_Pondered
+    excludedStoryFlag: 
+    goldReward: 200
+    reactionTopic:
+      topicName: Lily (DRAGONBLAZE SMOOTHIE + Regular)
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: "Man this is good... makes me feel ready too! I\u2019ll see you guys
+          later.\r\n"
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Bye!
+        effect: 1
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: Lily (WRONG)
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlag: Lily_Pondered
+    excludedStoryFlag: 
+    goldReward: 50
+    reactionTopic:
+      topicName: Lily (WRONG)
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: "This isn\u2019t what I asked for..."
+        effect: 1
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: Lily CHERRY JUICE
+    requiredPotions: 06000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlag: 
+    excludedStoryFlag: Lily_Pondered
+    goldReward: 100
+    reactionTopic:
+      topicName: Lily Cherry Juice
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Bitter. Exactly what I asked for. Thanks.
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "Don\u2019t beat yourself up so hard, Lily... It gets better."
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: Lily CHERRY JUICE (WRONG)
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlag: 
+    excludedStoryFlag: Lily_Pondered
+    goldReward: 50
+    reactionTopic:
+      topicName: Lily Cherry Juice (WRONG)
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Fine, I guess I deserve that.
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "Don\u2019t beat yourself up so hard, Lily... It gets better."
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  defaultFailReaction:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines: []
+  failureGoldReward: 0
+  companionPrefab: {fileID: 984125557315999305, guid: f5fc9e90e838a874bada376e314a7132, type: 3}

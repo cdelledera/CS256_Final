@@ -17,4 +17,8 @@ public class IngredientData : ScriptableObject
 
     [Tooltip("Leave as 'None' for regular fruit!")]
     public MagicEffect effect;
+
+    [Header("Visual Tweaks")]
+    [Tooltip("Leave at 1 for normal size. Lower it (e.g. 0.5) to shrink huge art like the Dragonhead.")]
+    public float visualScaleMultiplier = 1f;
 }
