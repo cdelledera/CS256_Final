@@ -1,0 +1,251 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Steph_Day3
+  m_EditorClassIdentifier: 
+  characterName: Steph
+  companion: {fileID: 0}
+  greetingTopic:
+    topicName: Hello
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Hey.
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: uh...good afternoon.
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: ...
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: You need anything?
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: Sorry, uh...can I get something to calm my nerves?
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "What\u2019s your name?"
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: "Steph. What\u2019s yours?"
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Pookie.
+      effect: 0
+  availableTopics:
+  - topicName: What has you down?
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Just... That feeling of regret.
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Ah, I get that sometimes.Four years of university to get my potions license
+        and here I am...
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: '*BANG*'
+      effect: 3
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Oh! Sorry, I shouldn\u2019t be talking about my own troubles."
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: "No... no, I\u2019m sorry... I guess it does lead me to my troubles anyway."
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: "Your job... That\u2019s... That\u2019s my fault."
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: ........ Oh my god are you Security bird???
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: "What?! Haha, no! Security bird is an eagle and they\u2019re three times
+        my size."
+      effect: 1
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh... I never saw the birds before... are you-
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: "No, I\u2019m not one of the birds. It\u2019s a little personal, I really
+        shouldn\u2019t get into it."
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Say as much as you want. I\u2019m under the bartender code of confidentiality."
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: "I\u2019ve never heard of this."
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Well it\u2019s not real, but I do have enough of a soul to not go spouting
+        other people\u2019s secrets"
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "So lay it on me. It\u2019s what bartenders are for."
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: "Alright... Well, as I said, I\u2019m not one of the birds, but I used
+        to date them."
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: H-huh??? All three? At the same time???
+      effect: 3
+    - speaker: {fileID: 11400000}
+      text: Yeah. Is that an issue?
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Not really, I\u2019m just shocked."
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "\u201CSo... What happened between you guys?"
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: Well, it was about two years ago.
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: We were on a date, and I had the wise idea of getting our fortunes told.
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Ah. Did the oracle foresee a breakup?
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: No. It foresaw the village being destroyed by a monster.
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "... Well that\u2019s... concerning"
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: "Yeah, but everyone knows fortunes aren\u2019t set in stone."
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: I wanted to go tell the adventurers like a normal person... They decided
+        to start a government.
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: That is such an insane leap, how did they get to that point?
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: It was their first idea!
+      effect: 1
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh my god.
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: "I should\u2019ve tried talking them out of it... I knew it was a bad
+        idea; I didn\u2019t want any part in it."
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: But I was too much of a coward.
+      effect: 0
+  - topicName: So, how can I make you feel better?
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: In terms of a drink? I wish I knew.
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh come on, everyone has a comfort drink.
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: Mine was healing potions. Not much of an option anymore.
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Mind if I ask why?
+      effect: 0
+    - speaker: {fileID: 11400000}
+      text: "I\u2019m not sure. My body being revitalized just put my mind at ease."
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "I\u2019ll see what I can do."
+      effect: 0
+  conditionalReactions:
+  - branchName: Regular Apple
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 06000000
+    goldReward: 250
+    reactionTopic:
+      topicName: Apple Given
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: This is pretty nice, thanks.
+        effect: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "Glad to hear. I assumed you\u2019d enjoy some apple flavor since healing
+          potions use golden apples."
+        effect: 0
+      - speaker: {fileID: 11400000}
+        text: "Heh, that\u2019s really thoughtful of you. I\u2019ll come back another
+          time."
+        effect: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: You have a nice day.
+        effect: 0
+  - branchName: Dragon Fruit
+    requiredPotions: 05000000
+    requiredEffects: 
+    requiredFlavors: 
+    goldReward: 250
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "Here, short of just giving you a glass of water, this is the closest
+          I\u2019ve got to a healing potion."
+        effect: 0
+      - speaker: {fileID: 11400000}
+        text: "... Well, it\u2019s pretty good. I appreciate it."
+        effect: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Any time, come back soon.
+        effect: 0
+      - speaker: {fileID: 11400000}
+        text: I will.
+        effect: 0
+  defaultFailReaction:
+    topicName: Default
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "Thanks, I\u2019ll be back at some point. This was nice."
+      effect: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Glad to hear it. You have a nice day.
+      effect: 0
+  failureGoldReward: 150
+  companionPrefab: {fileID: 0}

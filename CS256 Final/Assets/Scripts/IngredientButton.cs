@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI; // NEW: Needed to change the Image!
+using UnityEngine.UI;
 using TMPro;
 
 public class IngredientButton : MonoBehaviour
@@ -11,18 +11,16 @@ public class IngredientButton : MonoBehaviour
     public BrewingUIManager uiManager;
 
     [Header("Auto-UI Setup")]
-    public Image buttonIcon; // Drag the button's Image component here
-    public TextMeshProUGUI buttonText; // Drag the button's Text here
+    public Image buttonIcon;
+    public TextMeshProUGUI buttonText;
 
     void Start()
     {
-        // NEW: Automatically find the UI Manager in the scene!
         if (uiManager == null)
         {
             uiManager = FindFirstObjectByType<BrewingUIManager>();
         }
 
-        // When the game starts, automatically set the picture and text based on the data file!
         if (myIngredient != null)
         {
             if (buttonIcon != null) buttonIcon.sprite = myIngredient.icon;
@@ -34,6 +32,7 @@ public class IngredientButton : MonoBehaviour
     {
         if (myIngredient == null) return;
 
+        // 1. Tell the Logic Manager to remember the ingredient
         if (myIngredient.effect != MagicEffect.None)
         {
             uiManager.SelectSpecialIngredient(myIngredient);
@@ -41,6 +40,12 @@ public class IngredientButton : MonoBehaviour
         else
         {
             uiManager.SelectBaseIngredient(myIngredient);
+        }
+
+        if (BrewingVisuals.Instance != null)
+        {
+            // CHANGED: We now send the WHOLE myIngredient profile instead of just the icon!
+            BrewingVisuals.Instance.DropIngredientIntoGlass(myIngredient);
         }
     }
 }

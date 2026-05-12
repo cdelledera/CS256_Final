@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 537e1dc1cbbd7e24297df6806b395289, type: 3}
+  m_Name: Dragonblaze Smoothie
+  m_EditorClassIdentifier: 
+  potionName: Dragonblaze Smoothie
+  potionSprite: {fileID: 7599337678274954262, guid: a5869e4a2ef14094c831dac66065773c, type: 3}
+  recipeDescription: 'Two Ingredients:
+
+    Dragonfruit +  Pepper'

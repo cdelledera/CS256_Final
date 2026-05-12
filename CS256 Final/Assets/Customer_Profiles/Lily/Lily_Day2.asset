@@ -1,0 +1,642 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Lily_Day2
+  m_EditorClassIdentifier: 
+  characterName: Lily
+  defaultPortrait: {fileID: 0}
+  companion: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+  greetingTopic:
+    topicName: Good evening Lily
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Evening,, Lily. Who's this little guy?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: This is Gilby. We did an adventure or two a while back.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: Hello!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I told him I'd introduce him to you.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh, hi!... Was this before or after the ban?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: Before. I'm really sorry about what happened. How is the tavern doing?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Could be better. It's nice to meet you, Gilby.
+      effect: 0
+      bonusGold: 0
+  conditionalGreetings: []
+  availableTopics:
+  - topicName: How did you meet?
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Remember the purple prowler I fought last month?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh yeah, you gave me a ton of purple lemons after that. I really appreciate
+        it.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Well me and Gilby were together on that commission.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: She saved my life like three times.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "It\u2019s all potions. Unquestionably one of the most vital parts of
+        an adventurer\u2019s arsenal."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "I\u2019m touched."
+      effect: 0
+      bonusGold: 0
+  - topicName: How was the fight yesterday?
+    requiredDay: 0
+    requiredStoryFlag: Lily_Pondered
+    excludedStoryFlag: Lily_Lost
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: What? Oh! No, I didn't go through with it.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Why not?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I sat down for a bit and thought about-...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I see you smiling, did you seriously do what I think you did???
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: huh?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Don't worry about it.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: You know you could've just talked to me!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Would you have listened?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: ... Fair...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Beating up guards isn't going to do anything for me, I just wish I could
+        do something!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: You want the same drink I gave you last time?"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Nah... You know how I feel about all that. It's good for muscles, but
+        I'd prefer my brain be left alone.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: What are you two talking about???
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Don't worry about it!
+      effect: 0
+      bonusGold: 0
+  - topicName: How was the fight yesterday?
+    requiredDay: 0
+    requiredStoryFlag: Lily_Fought
+    excludedStoryFlag: Lily_Lost
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Eh, it went about as good as it was going to.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: You lost?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I wasn't going to win. You helped a decent bit, but you know how it is.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: You punch one in the face, the other calls backup
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh boy...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Then you got five guys with blunt greatswords all swinging at you at
+        once.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: And next thing you know you wake up in a cell.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: How'd you get out so fast?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I got bailed out for the time being... It was a pretty big hit on my
+        wallet, but I'll manage.
+      effect: 0
+      bonusGold: 0
+  - topicName: How was the fight yesterday?
+    requiredDay: 0
+    requiredStoryFlag: Lily_Lost
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Look into my black eye and guess how the fight went.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Yeahhhh... sorry about that...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: It's fine... I should've known it was a dumb idea.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Maybe I just needed to get kicked a few times to realize.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Beating up random guards clearly isn't doing anything for me... I just
+        wish I could do something!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: I'm sure you can think something up with enough time.
+      effect: 0
+      bonusGold: 0
+  - topicName: Did you also quit adventuring, Gilby?
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: Nope! I don't really like the new change, but it has been benefiting
+        me a lot.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Really? How's that?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: Well, I've always been best with scouting work.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: Since that's all we'll be doing until we find that monster, I've been
+        doing really well.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Well that's nice.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I'm shocked you can stand for it... adventurers are supposed to help
+        the community!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: I know, you're right... But still, I need to put food on the table.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: Plus, it's not like I don't help where I can!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: I mapped out what I think is a fruit dragon's den yesterday.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh wow... where is its hoard going to go?... no particular reason.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: The fruits will be sent to the Vigilant bird, and added to the contriband
+        stash.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Aw man...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Vigilant bird... hoarding all those fruits for no reason...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: Do potion fruits taste like anything?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: I always assumed "Dragonheads" tasted like... actual dragon fruit...
+        I really wanna try one now.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: It's not safe to eat raw potion ingredients.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: On that note, they are flavorless. I used to drop some fruit juice into
+        my potions to give them flavor.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Actually, why did you do that? It feels like a lot of extra work.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Makes people willing to pay more for my potions over competitors.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: ... You are so lucky we're friends.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: I gave you discounts!
+      effect: 1
+      bonusGold: 0
+  - topicName: What can I get for you?
+    requiredDay: 0
+    requiredStoryFlag: Lily_Pondered
+    excludedStoryFlag: 
+    requiredPreviousTopic: Did you also quit adventuring, Gilby?
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: What do you want, Gilby? Drinks are on me.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: "Oh, thanks! I\u2019ll have a glass of Sunset Juice."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "That sounds pretty good. I\u2019ll have one too."
+      effect: 0
+      bonusGold: 0
+  - topicName: What can I get for you?
+    requiredDay: 0
+    requiredStoryFlag: Lily_Fought
+    excludedStoryFlag: 
+    requiredPreviousTopic: Did you also quit adventuring, Gilby?
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "I\u2019ll have a Firecracker Mash. I deserve a bit of a kick in the
+        behind."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: Ooh, that sounds nice.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Are you sure you can handle it?
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+      text: "Yeah, I\u2019ll be fine."
+      effect: 0
+      bonusGold: 0
+  conditionalReactions:
+  - branchName: Pondered On Day 2
+    requiredPotions: 
+    requiredEffects: 05000000
+    requiredFlavors: 
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    goldReward: 250
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "Don\u2019t beat yourself up too hard, Lily. It gets better."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: ... Thank you. I appreciate it
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: SUNSET JUICE
+    requiredPotions: 12000000
+    requiredEffects: 00000000
+    requiredFlavors: 
+    requiredStoryFlag: Lily_Pondered
+    excludedStoryFlag: 
+    goldReward: 250
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Good as always.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+        text: Yeah, this is great! Thanks.
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: You two have a good day.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: ANYTHING SPICY
+    requiredPotions: 00000000
+    requiredEffects: 00000000
+    requiredFlavors: 02000000
+    requiredStoryFlag: Lily_Pondered
+    excludedStoryFlag: 
+    goldReward: 100
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Here you go.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Woah! Gilby can not drink that.
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "Oh come on, he\u2019ll like it."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+        text: "I\u2019ll try it..."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: You will die.
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Come on, let him try it!
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Fine...
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+        text: ... ... ...
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+        text: OH MY GOD IT'S TOO HOT!
+        effect: 3
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: What did I say?
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Oh... go uh... go get him to a doctor.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "I\u2019ll see you later. Come on, Gilby."
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: WRONG DRINK
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlag: Lily_Pondered
+    excludedStoryFlag: 
+    goldReward: 100
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+        text: Aw man...
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Eh... good enough for me.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: We should get out of your hair. Have a good one!
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Bye!
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: FIRECRACKER MASH
+    requiredPotions: 11000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlag: Lily_Fought
+    excludedStoryFlag: 
+    goldReward: 150
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+        text: Oh god! It's too hot!
+        effect: 3
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: I told you this would happen!
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Alright, I gotta take you out of here... Thanks again, I appreciate
+          it.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Have a good one! Stay safe!
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: ANYTHING SPICY (FOUGHT)
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 02000000
+    requiredStoryFlag: Lily_Fought
+    excludedStoryFlag: 
+    goldReward: 100
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: This is not what I asked for... Whatever...
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
+        text: "Oh god... oh god it\u2019s too hot..."
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: You gave it to Gilby too?!
+        effect: 3
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Come on, Gilby. We gotta go.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: WRONG DRINK(FOUGHT)
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlag: Lily_Fought
+    excludedStoryFlag: 
+    goldReward: 200
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlag: 
+      excludedStoryFlag: 
+      requiredPreviousTopic: 
+      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: "This isn\u2019t what I asked for..."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: What you asked for was to kick yourself in the behind.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "You don\u2019t need to hurt yourself when you make a mistake."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 0}
+        text: ... I like this drink.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: ... Thanks, I guess... Have a good one.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: You too!
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  defaultFailReaction:
+    topicName: Default
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines:
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Don\u2019t beat yourself up too hard, Lily. It gets better."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: ... Thank you. I appreciate it.
+      effect: 0
+      bonusGold: 0
+  failureGoldReward: 0
+  companionPrefab: {fileID: 4269466500552930279, guid: cf023c6fdd468d44f89ccf95a02b2627, type: 3}
