@@ -63,8 +63,15 @@ public class CustomerSpawner : MonoBehaviour
             // 2. Safely tell the UI to refresh its text
             GameManager.Instance.UpdateTimeUI();
 
-            // 3. Open the doors!
-            SpawnNextCustomer();
+            // 3. Open the doors! (UNLESS IT IS DAY 1!)
+            if (GameManager.Instance.currentDay == 1)
+            {
+                // Do nothing! Let the TutorialManager spawn the first customer after the lore!
+            }
+            else
+            {
+                SpawnNextCustomer();
+            }
         }
         else
         {
@@ -84,6 +91,15 @@ public class CustomerSpawner : MonoBehaviour
             controller.brewingSystem = cauldron;
             controller.doorLocation = doorLocation;
             controller.counterLocation = counterLocation;
+
+            // =========================================================
+            // --- NEW: INJECT THE SPRITE DIRECTLY IN THE SPAWNER ---
+            // =========================================================
+            SpriteRenderer spriteRenderer = newCustomer.GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null && controller.myProfile.worldSprite != null)
+            {
+                spriteRenderer.sprite = controller.myProfile.worldSprite;
+            }
 
             currentCustomerIndex++;
         }
@@ -106,8 +122,14 @@ public class CustomerSpawner : MonoBehaviour
         // 2. Are there still people in line? Send them in!
         if (currentCustomerIndex < today.customersToSpawn.Count)
         {
-            // Use Invoke to wait 2 seconds before sending the next person in, 
-            // so they don't clip through the person leaving!
+            // --- FIXED: The spawner directly tells the Tutorial that Joe left! ---
+            if (TutorialManager.Instance != null && TutorialManager.Instance.isTutorialActive)
+            {
+                TutorialManager.Instance.TriggerGoldTutorial();
+                return; // Stop here! The tutorial will trigger the next spawn when it is ready.
+            }
+
+            // Use Invoke to wait 2 seconds before sending the next person in
             Invoke("SpawnNextCustomer", 2f);
         }
         // 3. Is the line empty? And have we NOT ended the day yet?

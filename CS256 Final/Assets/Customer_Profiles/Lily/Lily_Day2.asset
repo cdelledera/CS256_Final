@@ -13,18 +13,19 @@ MonoBehaviour:
   m_Name: Lily_Day2
   m_EditorClassIdentifier: 
   characterName: Lily
-  defaultPortrait: {fileID: 0}
+  defaultPortrait: {fileID: 6641995128204204009, guid: a826ee4b134a89a41a935a5406fa0fc3, type: 3}
+  worldSprite: {fileID: -2896292981050581210, guid: a826ee4b134a89a41a935a5406fa0fc3, type: 3}
   companion: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
   greetingTopic:
     topicName: Good evening Lily
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
-      text: Evening,, Lily. Who's this little guy?
+      text: Evening Lily. Who's this little guy?
       effect: 0
       bonusGold: 0
     - speaker: {fileID: 11400000}
@@ -55,10 +56,10 @@ MonoBehaviour:
   availableTopics:
   - topicName: How did you meet?
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Remember the purple prowler I fought last month?
@@ -88,10 +89,11 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: How was the fight yesterday?
     requiredDay: 0
-    requiredStoryFlag: Lily_Pondered
-    excludedStoryFlag: Lily_Lost
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: What? Oh! No, I didn't go through with it.
@@ -153,10 +155,12 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: How was the fight yesterday?
     requiredDay: 0
-    requiredStoryFlag: Lily_Fought
-    excludedStoryFlag: Lily_Lost
+    requiredStoryFlags:
+    - Lily_Fought
+    excludedStoryFlags:
+    - Lily_Pondered
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Eh, it went about as good as it was going to.
@@ -198,10 +202,12 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: How was the fight yesterday?
     requiredDay: 0
-    requiredStoryFlag: Lily_Lost
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Lily_Lost
+    excludedStoryFlags:
+    - Lily_Pondered
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Look into my black eye and guess how the fight went.
@@ -230,10 +236,10 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: Did you also quit adventuring, Gilby?
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
       text: Nope! I don't really like the new change, but it has been benefiting
@@ -327,10 +333,11 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: What can I get for you?
     requiredDay: 0
-    requiredStoryFlag: Lily_Pondered
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: Did you also quit adventuring, Gilby?
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: What do you want, Gilby? Drinks are on me.
@@ -346,10 +353,11 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: What can I get for you?
     requiredDay: 0
-    requiredStoryFlag: Lily_Fought
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    flagsToSet: []
     requiredPreviousTopic: Did you also quit adventuring, Gilby?
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: "I\u2019ll have a Firecracker Mash. I deserve a bit of a kick in the
@@ -373,16 +381,17 @@ MonoBehaviour:
     requiredPotions: 
     requiredEffects: 05000000
     requiredFlavors: 
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
     goldReward: 250
     reactionTopic:
       topicName: 
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Lily_Pondered
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: "Don\u2019t beat yourself up too hard, Lily. It gets better."
@@ -397,16 +406,17 @@ MonoBehaviour:
     requiredPotions: 12000000
     requiredEffects: 00000000
     requiredFlavors: 
-    requiredStoryFlag: Lily_Pondered
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
     goldReward: 250
     reactionTopic:
       topicName: 
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: Good as always.
@@ -425,16 +435,17 @@ MonoBehaviour:
     requiredPotions: 00000000
     requiredEffects: 00000000
     requiredFlavors: 02000000
-    requiredStoryFlag: Lily_Pondered
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
     goldReward: 100
     reactionTopic:
       topicName: 
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: Here you go.
@@ -489,16 +500,17 @@ MonoBehaviour:
     requiredPotions: 
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: Lily_Pondered
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
     goldReward: 100
     reactionTopic:
       topicName: 
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
         text: Aw man...
@@ -521,16 +533,17 @@ MonoBehaviour:
     requiredPotions: 11000000
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: Lily_Fought
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
     goldReward: 150
     reactionTopic:
       topicName: 
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000, guid: d5f542d9e3440a64e8df3a16b7995a81, type: 2}
         text: Oh god! It's too hot!
@@ -554,16 +567,17 @@ MonoBehaviour:
     requiredPotions: 
     requiredEffects: 
     requiredFlavors: 02000000
-    requiredStoryFlag: Lily_Fought
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
     goldReward: 100
     reactionTopic:
       topicName: 
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: This is not what I asked for... Whatever...
@@ -586,16 +600,17 @@ MonoBehaviour:
     requiredPotions: 
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: Lily_Fought
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
     goldReward: 200
     reactionTopic:
       topicName: 
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: "This isn\u2019t what I asked for..."
@@ -625,10 +640,10 @@ MonoBehaviour:
   defaultFailReaction:
     topicName: Default
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: "Don\u2019t beat yourself up too hard, Lily. It gets better."

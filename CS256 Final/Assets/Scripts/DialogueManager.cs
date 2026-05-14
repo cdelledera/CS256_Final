@@ -7,13 +7,19 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
-    // --- NEW: The Master Group that holds everything! ---
     [Header("UI Panels")]
     public CanvasGroup interactionMasterGroup;
-
     public GameObject actionMenuPanel;
     public GameObject topicMenuPanel;
     public GameObject dialoguePanel;
+
+    public GameObject innerMonologuePanel;
+    public TextMeshProUGUI innerMonologueTextUI;
+
+    [Header("Monologue Positions")]
+    public Vector2 monologuePosDefault = new Vector2(0, -350);
+    public Vector2 monologuePosWithMenu = new Vector2(0, 0);
+    private RectTransform innerMonologueRect;
 
     [Header("Text & UI References")]
     public TextMeshProUGUI speakerNameTextUI;
@@ -42,7 +48,6 @@ public class DialogueManager : MonoBehaviour
     private int currentLineIndex = 0;
     private bool preventImmediateAdvance = false;
 
-    // --- ADDED: ReactingAndContinuing state for multi-drink orders! ---
     private enum DialogueState { Normal, InnerMonologue, ReactingAndLeaving, ReactingAndContinuing, Greeting }
     private DialogueState currentDialogueState;
 
@@ -66,10 +71,19 @@ public class DialogueManager : MonoBehaviour
         actionMenuPanel.SetActive(false);
         topicMenuPanel.SetActive(false);
         dialoguePanel.SetActive(false);
+        if (innerMonologuePanel != null) innerMonologuePanel.SetActive(false);
+
+        if (innerMonologuePanel != null) innerMonologueRect = innerMonologuePanel.GetComponent<RectTransform>();
     }
 
     void Update()
     {
+        if (innerMonologueRect != null && innerMonologuePanel.activeSelf)
+        {
+            Vector2 targetPos = (actionMenuPanel.activeSelf || topicMenuPanel.activeSelf) ? monologuePosWithMenu : monologuePosDefault;
+            innerMonologueRect.anchoredPosition = Vector2.Lerp(innerMonologueRect.anchoredPosition, targetPos, Time.deltaTime * 10f);
+        }
+
         if (preventImmediateAdvance)
         {
             preventImmediateAdvance = false;
@@ -78,16 +92,12 @@ public class DialogueManager : MonoBehaviour
 
         if (isTransitioning) return;
 
-        if (dialoguePanel.activeSelf && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E)))
+        if ((dialoguePanel.activeSelf || (innerMonologuePanel != null && innerMonologuePanel.activeSelf)) && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.E)))
         {
             if (isTyping) SkipTyping();
             else AdvanceDialogue();
         }
     }
-
-    // =========================================================
-    // --- THE INTIMATE MASTER TRANSITIONS ---
-    // =========================================================
 
     private void EnsureMasterIsActiveAndFadedIn(System.Action onComplete = null)
     {
@@ -95,17 +105,13 @@ public class DialogueManager : MonoBehaviour
         {
             StartCoroutine(FadeInMaster(onComplete));
         }
-        else
-        {
-            onComplete?.Invoke();
-        }
+        else onComplete?.Invoke();
     }
 
     private System.Collections.IEnumerator FadeInMaster(System.Action onComplete)
     {
         isTransitioning = true;
         preventImmediateAdvance = true;
-
         interactionMasterGroup.gameObject.SetActive(true);
         interactionMasterGroup.alpha = 0f;
 
@@ -120,7 +126,6 @@ public class DialogueManager : MonoBehaviour
             elapsed += Time.deltaTime;
             float t = elapsed / duration;
             float smoothT = t * t * (3f - 2f * t);
-
             interactionMasterGroup.alpha = Mathf.Lerp(0f, 1f, smoothT);
             rect.localScale = Vector3.Lerp(new Vector3(0.95f, 0.95f, 1f), originalScale, smoothT);
             yield return null;
@@ -128,9 +133,7 @@ public class DialogueManager : MonoBehaviour
 
         interactionMasterGroup.alpha = 1f;
         rect.localScale = originalScale;
-
         yield return new WaitForSeconds(0.15f);
-
         isTransitioning = false;
         onComplete?.Invoke();
     }
@@ -152,13 +155,8 @@ public class DialogueManager : MonoBehaviour
         interactionMasterGroup.alpha = 0f;
         interactionMasterGroup.gameObject.SetActive(false);
         isTransitioning = false;
-
         onComplete?.Invoke();
     }
-
-    // =========================================================
-    // --- MENU LOGIC ---
-    // =========================================================
 
     public void OpenActionMenu(CustomerController customer)
     {
@@ -169,7 +167,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         GameManager.Instance.isUIActive = true;
-
         actionMenuPanel.SetActive(true);
         topicMenuPanel.SetActive(false);
         dialoguePanel.SetActive(false);
@@ -186,13 +183,11 @@ public class DialogueManager : MonoBehaviour
                 actionMenuPanel.SetActive(false);
                 topicMenuPanel.SetActive(false);
                 dialoguePanel.SetActive(false);
+                if (innerMonologuePanel != null) innerMonologuePanel.SetActive(false);
                 GameManager.Instance.isUIActive = false;
             }));
         }
-        else
-        {
-            GameManager.Instance.isUIActive = false;
-        }
+        else GameManager.Instance.isUIActive = false;
     }
 
     public void OpenTopicMenu()
@@ -204,10 +199,14 @@ public class DialogueManager : MonoBehaviour
         for (int i = 0; i < currentCustomer.myProfile.availableTopics.Length; i++)
         {
             Topic topic = currentCustomer.myProfile.availableTopics[i];
-
             bool dayMatch = (topic.requiredDay == 0 || topic.requiredDay == GameManager.Instance.currentDay);
-            bool flagMatch = string.IsNullOrEmpty(topic.requiredStoryFlag) || GameManager.Instance.storyFlags.Contains(topic.requiredStoryFlag);
-            bool excludeMatch = string.IsNullOrEmpty(topic.excludedStoryFlag) || !GameManager.Instance.storyFlags.Contains(topic.excludedStoryFlag);
+
+            bool flagMatch = true;
+            foreach (string req in topic.requiredStoryFlags) { if (!string.IsNullOrEmpty(req) && !GameManager.Instance.storyFlags.Contains(req)) flagMatch = false; }
+
+            bool excludeMatch = true;
+            foreach (string exc in topic.excludedStoryFlags) { if (!string.IsNullOrEmpty(exc) && GameManager.Instance.storyFlags.Contains(exc)) excludeMatch = false; }
+
             bool prereqMet = string.IsNullOrEmpty(topic.requiredPreviousTopic) || discussedTopics.Contains(topic.requiredPreviousTopic);
 
             if (dayMatch && flagMatch && excludeMatch && prereqMet) visibleTopics.Add(topic);
@@ -246,7 +245,11 @@ public class DialogueManager : MonoBehaviour
         currentLineIndex = 0;
 
         if (!discussedTopics.Contains(activeTopic.topicName)) discussedTopics.Add(activeTopic.topicName);
-        if (!string.IsNullOrEmpty(activeTopic.flagToSet)) GameManager.Instance.AddStoryFlag(activeTopic.flagToSet);
+
+        if (activeTopic.flagsToSet != null)
+        {
+            foreach (string f in activeTopic.flagsToSet) { if (!string.IsNullOrEmpty(f)) GameManager.Instance.AddStoryFlag(f); }
+        }
 
         topicMenuPanel.SetActive(false);
         dialoguePanel.SetActive(true);
@@ -256,6 +259,9 @@ public class DialogueManager : MonoBehaviour
 
     public void ShowInnerMonologue(string text)
     {
+        GameManager.Instance.isUIActive = true;
+        if (interactionMasterGroup != null) interactionMasterGroup.interactable = false; // --- FREEZE THE MENU! ---
+
         preventImmediateAdvance = true;
         currentDialogueState = DialogueState.InnerMonologue;
 
@@ -263,11 +269,29 @@ public class DialogueManager : MonoBehaviour
         activeTopic.lines = new DialogueLine[] { new DialogueLine { text = text } };
         currentLineIndex = 0;
 
-        actionMenuPanel.SetActive(false);
-        topicMenuPanel.SetActive(false);
-        dialoguePanel.SetActive(true);
+        innerMonologuePanel.SetActive(true);
+        DisplayCurrentLine();
+    }
 
-        EnsureMasterIsActiveAndFadedIn(DisplayCurrentLine);
+    public void ShowInnerMonologueSequence(string[] texts)
+    {
+        GameManager.Instance.isUIActive = true;
+        if (interactionMasterGroup != null) interactionMasterGroup.interactable = false; // --- FREEZE THE MENU! ---
+
+        preventImmediateAdvance = true;
+        currentDialogueState = DialogueState.InnerMonologue;
+
+        activeTopic = new Topic();
+        activeTopic.lines = new DialogueLine[texts.Length];
+
+        for (int i = 0; i < texts.Length; i++)
+        {
+            activeTopic.lines[i] = new DialogueLine { text = texts[i] };
+        }
+        currentLineIndex = 0;
+
+        innerMonologuePanel.SetActive(true);
+        DisplayCurrentLine();
     }
 
     public void StartGreeting(CustomerController customer, Topic greetingTopic)
@@ -289,25 +313,27 @@ public class DialogueManager : MonoBehaviour
         topicMenuPanel.SetActive(false);
         dialoguePanel.SetActive(true);
 
-        if (!string.IsNullOrEmpty(activeTopic.flagToSet)) GameManager.Instance.AddStoryFlag(activeTopic.flagToSet);
+        if (activeTopic.flagsToSet != null)
+        {
+            foreach (string f in activeTopic.flagsToSet) { if (!string.IsNullOrEmpty(f)) GameManager.Instance.AddStoryFlag(f); }
+        }
 
         EnsureMasterIsActiveAndFadedIn(DisplayCurrentLine);
     }
 
-    // --- ADDED: The endInteraction boolean parameter ---
     public void ShowReaction(Topic reactionTopic, bool endInteraction = true)
     {
         if (reactionTopic == null || reactionTopic.lines == null || reactionTopic.lines.Length == 0)
         {
-            Debug.LogWarning("Wait! You forgot to write dialogue lines for this reaction in the Inspector!");
-            if (reactionTopic != null && !string.IsNullOrEmpty(reactionTopic.flagToSet)) GameManager.Instance.AddStoryFlag(reactionTopic.flagToSet);
-
+            if (reactionTopic != null && reactionTopic.flagsToSet != null)
+            {
+                foreach (string f in reactionTopic.flagsToSet) { if (!string.IsNullOrEmpty(f)) GameManager.Instance.AddStoryFlag(f); }
+            }
             GameManager.Instance.isUIActive = false;
             currentCustomer.FinishTransaction();
             return;
         }
 
-        // --- UPDATED: Route state based on the boolean ---
         currentDialogueState = endInteraction ? DialogueState.ReactingAndLeaving : DialogueState.ReactingAndContinuing;
         preventImmediateAdvance = true;
         activeTopic = reactionTopic;
@@ -317,14 +343,14 @@ public class DialogueManager : MonoBehaviour
         topicMenuPanel.SetActive(false);
         dialoguePanel.SetActive(true);
 
-        if (!string.IsNullOrEmpty(activeTopic.flagToSet)) GameManager.Instance.AddStoryFlag(activeTopic.flagToSet);
+        if (activeTopic.flagsToSet != null)
+        {
+            foreach (string f in activeTopic.flagsToSet) { if (!string.IsNullOrEmpty(f)) GameManager.Instance.AddStoryFlag(f); }
+        }
 
         EnsureMasterIsActiveAndFadedIn(DisplayCurrentLine);
     }
 
-    // =========================================================
-    // --- THE NEW ADVANCE INTERCEPTOR ---
-    // =========================================================
     private void AdvanceDialogue()
     {
         DialogueLine currentLine = activeTopic.lines[currentLineIndex];
@@ -332,7 +358,6 @@ public class DialogueManager : MonoBehaviour
         if (currentLine.bonusGold > 0)
         {
             isTransitioning = true;
-
             GameManager.Instance.AddGoldWithAnimation(currentLine.bonusGold, () =>
             {
                 string charName = currentLine.speaker != null ? currentLine.speaker.characterName : "Bonus";
@@ -342,10 +367,7 @@ public class DialogueManager : MonoBehaviour
                 ProceedToNextLine();
             });
         }
-        else
-        {
-            ProceedToNextLine();
-        }
+        else ProceedToNextLine();
     }
 
     private void ProceedToNextLine()
@@ -372,10 +394,20 @@ public class DialogueManager : MonoBehaviour
         }
         else if (currentDialogueState == DialogueState.InnerMonologue)
         {
-            dialoguePanel.SetActive(false);
-            OpenActionMenu(currentCustomer);
+            currentLineIndex++;
+            if (currentLineIndex < activeTopic.lines.Length) DisplayCurrentLine();
+            else
+            {
+                innerMonologuePanel.SetActive(false);
+                if (interactionMasterGroup != null) interactionMasterGroup.interactable = true; // --- UNFREEZE MENU! ---
+
+                if (!actionMenuPanel.activeSelf && !topicMenuPanel.activeSelf && !dialoguePanel.activeSelf)
+                {
+                    GameManager.Instance.isUIActive = false;
+                    CloseAllMenus();
+                }
+            }
         }
-        // --- ADDED: The routing for ReactingAndContinuing ---
         else if (currentDialogueState == DialogueState.ReactingAndContinuing)
         {
             currentLineIndex++;
@@ -383,7 +415,7 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 dialoguePanel.SetActive(false);
-                OpenActionMenu(currentCustomer); // Stays at the bar for the next drink!
+                OpenActionMenu(currentCustomer);
             }
         }
         else if (currentDialogueState == DialogueState.ReactingAndLeaving)
@@ -393,7 +425,6 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 dialoguePanel.SetActive(false);
-
                 StartCoroutine(FadeOutMaster(() =>
                 {
                     if (currentCustomer.pendingGold > 0)
@@ -418,48 +449,45 @@ public class DialogueManager : MonoBehaviour
     {
         DialogueLine line = activeTopic.lines[currentLineIndex];
 
-        if (currentDialogueState == DialogueState.InnerMonologue) speakerNameTextUI.text = "Player";
-        else speakerNameTextUI.text = line.speaker != null ? line.speaker.characterName : "???";
-
-        if (portraitImageUI != null)
+        if (currentDialogueState == DialogueState.InnerMonologue)
         {
-            if (line.speaker != null && line.speaker.defaultPortrait != null && currentDialogueState != DialogueState.InnerMonologue)
+            StartTypingLine(line.text, innerMonologueTextUI);
+        }
+        else
+        {
+            speakerNameTextUI.text = line.speaker != null ? line.speaker.characterName : "???";
+            if (portraitImageUI != null)
             {
-                portraitImageUI.sprite = line.speaker.defaultPortrait;
-                portraitImageUI.color = Color.white;
+                if (line.speaker != null && line.speaker.defaultPortrait != null)
+                {
+                    portraitImageUI.sprite = line.speaker.defaultPortrait;
+                    portraitImageUI.color = Color.white;
+                }
+                else portraitImageUI.color = Color.clear;
             }
-            else
-            {
-                portraitImageUI.color = Color.clear;
-            }
+            StartTypingLine(line.text, dialogueTextUI);
         }
 
         if (line.effect == ScreenEffect.Shake || line.effect == ScreenEffect.ShakeAndFlash) StartCoroutine(ShakeCamera(0.2f, 0.3f));
         if (line.effect == ScreenEffect.Flash || line.effect == ScreenEffect.ShakeAndFlash) StartCoroutine(ScreenFlash());
-
-        StartTypingLine(line.text);
     }
 
-    // =========================================================
-    // --- TYPEWRITER & EFFECTS ---
-    // =========================================================
-
-    private void StartTypingLine(string text)
+    private void StartTypingLine(string text, TextMeshProUGUI targetTextUI)
     {
         currentFullLine = text;
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
-        typingCoroutine = StartCoroutine(TypeText(text));
+        typingCoroutine = StartCoroutine(TypeText(text, targetTextUI));
     }
 
-    private System.Collections.IEnumerator TypeText(string line)
+    private System.Collections.IEnumerator TypeText(string line, TextMeshProUGUI targetTextUI)
     {
         isTyping = true;
-        dialogueTextUI.text = "";
+        targetTextUI.text = "";
         int visibleCharacterCount = 0;
 
         foreach (char letter in line.ToCharArray())
         {
-            dialogueTextUI.text += letter;
+            targetTextUI.text += letter;
             if (char.IsLetterOrDigit(letter))
             {
                 visibleCharacterCount++;
@@ -481,14 +509,16 @@ public class DialogueManager : MonoBehaviour
     private void SkipTyping()
     {
         if (typingCoroutine != null) StopCoroutine(typingCoroutine);
-        dialogueTextUI.text = currentFullLine;
+
+        if (currentDialogueState == DialogueState.InnerMonologue) innerMonologueTextUI.text = currentFullLine;
+        else dialogueTextUI.text = currentFullLine;
+
         isTyping = false;
     }
 
     private System.Collections.IEnumerator ShakeCamera(float duration, float magnitude)
     {
         Vector3 originalCamPos = mainCamera != null ? mainCamera.transform.localPosition : Vector3.zero;
-
         RectTransform uiRect = null;
         Vector3 originalUIPos = Vector3.zero;
 
@@ -501,21 +531,13 @@ public class DialogueManager : MonoBehaviour
         if (voiceAudioSource != null && slamSound != null) voiceAudioSource.PlayOneShot(slamSound);
 
         float elapsed = 0.0f;
-
         while (elapsed < duration)
         {
             float x = Random.Range(-1f, 1f) * magnitude;
             float y = Random.Range(-1f, 1f) * magnitude;
 
-            if (mainCamera != null)
-            {
-                mainCamera.transform.localPosition = new Vector3(originalCamPos.x + x, originalCamPos.y + y, originalCamPos.z);
-            }
-
-            if (uiRect != null)
-            {
-                uiRect.anchoredPosition = new Vector2(originalUIPos.x + (x * 75f), originalUIPos.y + (y * 75f));
-            }
+            if (mainCamera != null) mainCamera.transform.localPosition = new Vector3(originalCamPos.x + x, originalCamPos.y + y, originalCamPos.z);
+            if (uiRect != null) uiRect.anchoredPosition = new Vector2(originalUIPos.x + (x * 75f), originalUIPos.y + (y * 75f));
 
             elapsed += Time.deltaTime;
             yield return null;

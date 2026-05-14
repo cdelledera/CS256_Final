@@ -1,0 +1,801 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Lily_Day5
+  m_EditorClassIdentifier: 
+  characterName: Lily
+  defaultPortrait: {fileID: 6641995128204204009, guid: a826ee4b134a89a41a935a5406fa0fc3, type: 3}
+  worldSprite: {fileID: -2896292981050581210, guid: a826ee4b134a89a41a935a5406fa0fc3, type: 3}
+  companion: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+  greetingTopic:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines: []
+  conditionalGreetings:
+  - topicName: PONDERING + CHARISMA + HEALING
+    requiredDay: 0
+    requiredStoryFlags:
+    - Lily_Pondered
+    - Lily_Charisma
+    - Steph_Healing
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: I return!
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh hey welcome back. How did things go yesterday?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: ' Pretty well! I actually got quite a few people on board.'
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Well that\u2019s awesome!"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: In fact, I was even given a pretty generous donation.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "I\u2019m using most of it for the guild, but you deserve a tip for your
+        help."
+      effect: 0
+      bonusGold: 100
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Bartender.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh, hi Steph! This is my friend Lily, she-
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "You\u2019re selling potions."
+      effect: 2
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Woah! Let\u2019s not say the P word out loud in here."
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "She\u2019s not a cop is she? Quick, get me something to drink, I\u2019ll
+        take her!"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: No! I am not a cop! Calm down!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "I just wanted to let you know, you\u2019re putting yourself in danger..."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Sometimes you need to put yourself in danger if you want a proper life.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "... Sit down, Steph. Let\u2019s all talk and I\u2019ll get you something
+        to drink."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Fine...
+      effect: 1
+      bonusGold: 0
+  - topicName: PONDERING + NO CHARISMA + HEALING
+    requiredDay: 0
+    requiredStoryFlags:
+    - Lily_Pondered
+    - Steph_Healing
+    excludedStoryFlags:
+    - Lily_Charisma
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "I\u2019m back!"
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh hey welcome back. How did things go yesterday?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Not great. I got a couple people to join but I could seriously use some
+        more support.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "I\u2019m sure you\u2019ll be able to find some people."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Bartender.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh, hi Steph! This is my friend Lily, she-
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "You\u2019re selling potions."
+      effect: 2
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Woah! Let\u2019s not say the P word out loud in here."
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "She\u2019s not a cop is she? Quick, get me something to drink, I\u2019ll
+        take her!"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: No! I am not a cop! Calm down!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "I just wanted to let you know, you\u2019re putting yourself in danger..."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Sometimes you need to put yourself in danger if you want a proper life.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "... Sit down, Steph. Let\u2019s all talk and I\u2019ll get you something
+        to drink."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Fine...
+      effect: 1
+      bonusGold: 0
+  - topicName: PONDERING + NO CHARISMA + HEALING
+    requiredDay: 0
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags:
+    - Lily_Charisma
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "I\u2019m back!"
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh hey welcome back. How did things go yesterday?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Not great. I got a couple people to join but I could seriously use some
+        more support.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "I\u2019m sure you\u2019ll be able to find some people."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Bartender.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh, hi Steph! This is my friend Lily, she-
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "You\u2019re selling potions."
+      effect: 2
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Woah! Let\u2019s not say the P word out loud in here."
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "She\u2019s not a cop is she? Quick, get me something to drink, I\u2019ll
+        take her!"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: No! I am not a cop! Calm down!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "I just wanted to let you know, you\u2019re putting yourself in danger..."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Sometimes you need to put yourself in danger if you want a proper life.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "... Sit down, Steph. Let\u2019s all talk and I\u2019ll get you something
+        to drink."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Fine...
+      effect: 1
+      bonusGold: 0
+  - topicName: PONDERING + CHARISMA
+    requiredDay: 0
+    requiredStoryFlags:
+    - Lily_Pondered
+    - Lily_Charisma
+    excludedStoryFlags:
+    - Steph_Healing
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: I return!
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh hey welcome back. How did things go yesterday?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: ' Pretty well! I actually got quite a few people on board.'
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Well that\u2019s awesome!"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: In fact, I was even given a pretty generous donation.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "I\u2019m using most of it for the guild, but you deserve a tip for your
+        help."
+      effect: 0
+      bonusGold: 100
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Hey.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Hey, welcome back.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: New customer?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Yeah, she\u2019s just here for the drinks."
+      effect: 0
+      bonusGold: 0
+  - topicName: NO PONDER + HEALING
+    requiredDay: 0
+    requiredStoryFlags:
+    - Steph_Healing
+    excludedStoryFlags:
+    - Lily_Pondered
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: I'm back.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh hey welcome back. How did things go yesterday?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Well, I did get that small job from Joe. Outside of that, I couldn\u2019t
+        find anything."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: My condolences... Have you tried the nursing home?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: The grannies are doing fine! I was apparently the last guild quitter
+        to consider them.
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Ouch... maybe you can crash with me for a little bit... If things go
+        really bad.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Thanks...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Bartender.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh, hi Steph! This is my friend Lily, she-
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "You\u2019re selling potions."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Woah! Let\u2019s not say the P word out loud in here."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "She\u2019s not a cop is she? Quick, get me something to drink, I\u2019ll
+        take her!"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: No! I am not a cop! Calm down!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "I just wanted to let you know, you\u2019re putting yourself in danger..."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "... Sit down, Steph. Let\u2019s all talk and I\u2019ll get you something
+        to drink."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Fine...
+      effect: 1
+      bonusGold: 0
+  - topicName: NO PONDER + NO HEALING
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    - Steph_Healing
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: I'm back.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh hey welcome back. How did things go yesterday?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Well, I did get that small job from Joe. Outside of that, I couldn\u2019t
+        find anything."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: My condolences... Have you tried the nursing home?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: The grannies are doing fine! I was apparently the last guild quitter
+        to consider them.
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Ouch... maybe you can crash with me for a little bit... If things go
+        really bad.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Thanks...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Hey.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Hey, welcome back.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: New customer?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Yeah, she\u2019s just here for the drinks."
+      effect: 0
+      bonusGold: 0
+  availableTopics:
+  - topicName: You two should introduce yourselves.
+    requiredDay: 0
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "Oh, yeah. Hi, I\u2019m Lily."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Steph.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: (They're just talking...nothing I don't already know. I clean the counter
+        for a bit...)
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: (After some time...)
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "I\u2019m really sorry about the guild..."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Once again, I sit here wishing I could do something about it.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Well... I am starting up a new guild. I could always use a new member.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "I\u2019m not sure how much help I\u2019d be, I\u2019m not really the
+        adventuring type."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Yes but... as you said, you know the birds personally
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I think we can do something more than just help the community.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "I see... I\u2019m really not sure. What if it all fails and things are
+        worse than they were before?"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Well do you want to help or not?
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: I do, I just-
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "If you want to actually help and \u201Catone\u201D for whatever you
+        think you did, the opportunity is right here."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: We kick the birds out, we bring the forest back to normal, my friend
+        gets their potion shop back.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: And I get to adventure normally again.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "I\u2019ll do it... I\u2019ll join this new adventurer's guild."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "That\u2019s what I\u2019m talking about! You won\u2019t regret it."
+      effect: 1
+      bonusGold: 0
+  - topicName: "How is the new adventurer\u2019s guild doing?"
+    requiredDay: 0
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "As I said before, It\u2019s not doing too bad."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Issue is, I think one of stalker bird\u2019s guards saw me talking about
+        it."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: In that case you have 2 days.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Huh?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: The guards report all incidents of the week on the last day of said week.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Action is taken immediately after.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: ... Well so much for slowly gaining trust by helping the community.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: If you need help fleeing the forest, let me know in advance.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Nah, it just means I need to work faster.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Mind telling me what the actual plan is?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "It\u2019s a surprise that will help us later."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: What matters is that I need to be all around town tonight and tomorrow.
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: What do you two want to drink?
+      effect: 0
+      bonusGold: 0
+  - topicName: What do you two want to drink?
+    requiredDay: 0
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: I cannot express enough how little the actual beverage matters to me.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "I guess I\u2019ll just take what I had last time."
+      effect: 0
+      bonusGold: 0
+  - topicName: You two should introduce yourselves.
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "Oh, yeah. Hi, I\u2019m Lily."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Steph.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Nice feathers
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: heh, Thanks...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "So, how\u2019s life?"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Not great...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Same.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: (The two take a little while, summarizing their stories to one another.)
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Wow... And I thought I had it bad...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Hey, we\u2019re both losers. It\u2019s just the way the world screws
+        people over."
+      effect: 0
+      bonusGold: 0
+  - topicName: You two want a drink?
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    flagsToSet: []
+    requiredPreviousTopic: You two should introduce yourselves.
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "Like I said, I really can\u2019t afford much."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: "Don\u2019t worry, I\u2019ll get it for you."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Thanks... I guess I\u2019ll have a cherry juice."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+      text: Get both of us something really nice~
+      effect: 0
+      bonusGold: 0
+  conditionalReactions:
+  - branchName: Pondering(LITERALLY ANYTHING)
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
+    goldReward: 200
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: "Thanks. I\u2019ll hopefully see you soon."
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: ROMANCE SMOOTHIE
+    requiredPotions: 10000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    goldReward: 350
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Secret_Yuri
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: ... What is this?
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+        text: Do you have a complaint?
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Eh... not really... You look cute with that smoothie~
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "Alright, alright, let\u2019s keep it age appropriate here! You two
+          have a good day, get out of my bar, make sure to talk to each other"
+        effect: 3
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Alright, jeez! Thanks!
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+        text: Bye!
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: CHERRY JUICE
+    requiredPotions: 06000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    goldReward: 100
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - 
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Thanks...
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+        text: Alright...if that's what you want.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: It's what I deserve.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: WRONG
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    goldReward: 150
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - 
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+        text: Thanks.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Not really what I asked for...
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: caacd43d847d12f4896590de52824cb9, type: 2}
+        text: "But doesn\u2019t it taste good?"
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "Yeah... I\u2019m gonna head out. You guys have a good day."
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  defaultFailReaction:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines: []
+  failureGoldReward: 0
+  companionPrefab: {fileID: 1872637514787282241, guid: 1fe2bb2a56ff256489cfae841a5845a7, type: 3}

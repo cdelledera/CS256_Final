@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 537e1dc1cbbd7e24297df6806b395289, type: 3}
-  m_Name: CrimsonWyrm
+  m_Name: Sour Cherry
   m_EditorClassIdentifier: 
-  potionName: CrimsonWyrm
-  potionSprite: {fileID: -2800330342511436272, guid: cf7716d13bbfd874b8ca97d9d9d0c88f, type: 3}
+  potionName: Sour Cherry
+  potionSprite: {fileID: 3097400198628653322, guid: c051a54a3e54d8c44befaf43d7e99ae7, type: 3}
   recipeDescription: 'Two Ingredients:
 
-    Cherry + Dragonfruit'
+    Cherry + Lemon'

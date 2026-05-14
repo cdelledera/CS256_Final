@@ -13,23 +13,25 @@ MonoBehaviour:
   m_Name: Lily_Day4
   m_EditorClassIdentifier: 
   characterName: Lily
-  defaultPortrait: {fileID: 0}
+  defaultPortrait: {fileID: 6641995128204204009, guid: a826ee4b134a89a41a935a5406fa0fc3, type: 3}
+  worldSprite: {fileID: -2896292981050581210, guid: a826ee4b134a89a41a935a5406fa0fc3, type: 3}
   companion: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
   greetingTopic:
     topicName: 
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines: []
   conditionalGreetings:
   - topicName: Greeting(PONDERED)
     requiredDay: 0
-    requiredStoryFlag: Lily_Pondered
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: "Alright, I finally found out what I\u2019m going to do to fix all of
@@ -55,10 +57,11 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: Greeting(NOT PONDERED)
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: Lily_Pondered
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Heya...
@@ -83,10 +86,11 @@ MonoBehaviour:
   availableTopics:
   - topicName: So, Lily, what's going on?
     requiredDay: 0
-    requiredStoryFlag: Lily_Pondered
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: "I am going to start up a new adventurer\u2019s guild! That\u2019ll show
@@ -134,10 +138,11 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: What's up Joe?
     requiredDay: 0
-    requiredStoryFlag: Lily_Pondered
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
       text: Not too much. A pretty large branch got caught up in my irrigation system
@@ -168,10 +173,12 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: So, what can I get you guys?
     requiredDay: 0
-    requiredStoryFlag: Lily_Pondered
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Joe_Got_Pink
+    - Lily_Pondered
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: What's up Joe?
     lines:
     - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
       text: A Pink Lemonade would be nice about now.
@@ -185,12 +192,34 @@ MonoBehaviour:
       text: Coming right up.
       effect: 0
       bonusGold: 0
+  - topicName: So, what can I get you guys?
+    requiredDay: 0
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags:
+    - Joe_Got_Pink
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: A Lemonade would be nice about now.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Get me a dragonblaze smoothie.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Coming right up.
+      effect: 0
+      bonusGold: 0
   - topicName: So, Lily, what's going on?
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: Lily_Pondered
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: "I got fined hard for the fight the other day... Rent went up too; I
@@ -217,10 +246,11 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: What's up, Joe?
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: Lily_Pondered
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
       text: Not too much. A pretty large branch got caught up in my irrigation system
@@ -246,10 +276,12 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: So, what can I get you guys?
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: Lily_Pondered
+    requiredStoryFlags:
+    - Joe_Got_Pink
+    excludedStoryFlags:
+    - Lily_Pondered
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: What's up, Joe?
     lines:
     - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
       text: A Pink Lemonade would be nice about now.
@@ -272,21 +304,128 @@ MonoBehaviour:
       text: Coming right up.
       effect: 0
       bonusGold: 0
+  - topicName: So, what can I get you guys?
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    - Joe_Got_Pink
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: A Lemonade would be nice about now.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "I really can\u2019t afford anything, I just wanted to say hi."
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+      text: "I\u2019ll pay for you. Our bartender here deserves the business and
+        you deserve something to drink."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "... I\u2019ll have some cherry juice then. Thank you."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Coming right up.
+      effect: 0
+      bonusGold: 0
   conditionalReactions:
-  - branchName: Joe (Pink Lemonade)
+  - branchName: Joe Pink Lemonade
     requiredPotions: 08000000
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: 
-    excludedStoryFlag: Joe_Served
+    requiredStoryFlags:
+    - Joe_Got_Pink
+    excludedStoryFlags:
+    - Joe_Served
     goldReward: 0
+    reactionTopic:
+      topicName: Joe Lemonade
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Joe_Served
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+        text: Thanks Pookie!
+        effect: 1
+        bonusGold: 200
+    endInteraction: 0
+  - branchName: Joe ( Pink Lemonade)
+    requiredPotions: 08000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Joe_Served
+    goldReward: 400
     reactionTopic:
       topicName: Joe Pink Lemonade
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Joe_Served
+      - Joe_Got_Pink
       requiredPreviousTopic: 
-      flagToSet: Joe_Served
+      lines:
+      - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+        text: This... no way...
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: It might not be what you wanted. Give it a shot.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+        text: " *sip* \u201CIt is! This is the drink! I remember it like it was yesterday..."
+        effect: 3
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+        text: "What\u2019s it called?"
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "... It\u2019s just pink lemonade..."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+        text: ... What.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "Yeah, it\u2019s lemonade but... pink and flavored up a little..."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
+        text: ... Well now I just feel silly. Either way, this is absolutely wonderful.
+          Thank you so much!
+        effect: 3
+        bonusGold: 400
+    endInteraction: 0
+  - branchName: Joe ( Lemonade)
+    requiredPotions: 02000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Joe_Served
+    goldReward: 0
+    reactionTopic:
+      topicName: Joe Lemonade
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Joe_Served
+      requiredPreviousTopic: 
       lines:
       - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
         text: Thanks Pookie!
@@ -297,16 +436,18 @@ MonoBehaviour:
     requiredPotions: 
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: 
-    excludedStoryFlag: Joe_Served
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Joe_Served
     goldReward: 100
     reactionTopic:
       topicName: Joe (ANYTHING ELSE)
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Joe_Served
       requiredPreviousTopic: 
-      flagToSet: Joe_Served
       lines:
       - speaker: {fileID: 11400000, guid: a89489bb35b1b8c48a79ba67750311ca, type: 2}
         text: Oh...uh ok? Thanks Pookie.
@@ -317,16 +458,18 @@ MonoBehaviour:
     requiredPotions: 13000000
     requiredEffects: 06000000
     requiredFlavors: 
-    requiredStoryFlag: Lily_Pondered
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
     goldReward: 200
     reactionTopic:
       topicName: Lily (DRAGONBLAZE SMOOTHIE + Charisma)
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Lily_Charisma
       requiredPreviousTopic: 
-      flagToSet: Lily_Charisma
       lines:
       - speaker: {fileID: 11400000}
         text: "Man this is good... makes me feel ready too! I\u2019ll see you guys
@@ -342,16 +485,17 @@ MonoBehaviour:
     requiredPotions: 13000000
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: Lily_Pondered
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
     goldReward: 200
     reactionTopic:
       topicName: Lily (DRAGONBLAZE SMOOTHIE + Regular)
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: "Man this is good... makes me feel ready too! I\u2019ll see you guys
@@ -363,20 +507,44 @@ MonoBehaviour:
         effect: 1
         bonusGold: 0
     endInteraction: 1
-  - branchName: Lily (WRONG)
+  - branchName: Lily (WRONG) + CHARISMA
     requiredPotions: 
-    requiredEffects: 
+    requiredEffects: 06000000
     requiredFlavors: 
-    requiredStoryFlag: Lily_Pondered
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
     goldReward: 50
     reactionTopic:
       topicName: Lily (WRONG)
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Lily_Charisma
       requiredPreviousTopic: 
-      flagToSet: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: "This isn\u2019t what I asked for..."
+        effect: 1
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: Lily (WRONG)
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
+    goldReward: 50
+    reactionTopic:
+      topicName: Lily (WRONG)
+      requiredDay: 0
+      requiredStoryFlags:
+      - Lily_Pondered
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
       lines:
       - speaker: {fileID: 11400000}
         text: "This isn\u2019t what I asked for..."
@@ -387,16 +555,17 @@ MonoBehaviour:
     requiredPotions: 06000000
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: 
-    excludedStoryFlag: Lily_Pondered
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
     goldReward: 100
     reactionTopic:
       topicName: Lily Cherry Juice
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: Bitter. Exactly what I asked for. Thanks.
@@ -411,16 +580,16 @@ MonoBehaviour:
     requiredPotions: 
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: 
-    excludedStoryFlag: Lily_Pondered
+    requiredStoryFlags: []
+    excludedStoryFlags: []
     goldReward: 50
     reactionTopic:
       topicName: Lily Cherry Juice (WRONG)
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: Fine, I guess I deserve that.
@@ -434,10 +603,10 @@ MonoBehaviour:
   defaultFailReaction:
     topicName: 
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines: []
   failureGoldReward: 0
   companionPrefab: {fileID: 984125557315999305, guid: f5fc9e90e838a874bada376e314a7132, type: 3}

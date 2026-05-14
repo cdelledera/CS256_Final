@@ -9,10 +9,8 @@ public class DialogueLine
     public CharacterData speaker;
     [TextArea(2, 4)] public string text;
 
-    // --- The effect dropdown for the Inspector! ---
     public ScreenEffect effect = ScreenEffect.None;
 
-    // --- NEW: The mid-dialogue gold reward! ---
     [Tooltip("If greater than 0, the player gets this gold instantly when this line is spoken!")]
     public int bonusGold;
 }
@@ -20,20 +18,17 @@ public class DialogueLine
 [System.Serializable]
 public class ReactionBranch
 {
-    public string branchName = "New Reaction"; // Just to keep your Inspector organized!
+    public string branchName = "New Reaction";
 
     [Header("The Conditions (Leave lists empty to ignore)")]
     public List<Potion> requiredPotions = new List<Potion>();
     public List<MagicEffect> requiredEffects = new List<MagicEffect>();
     public List<DrinkFlavor> requiredFlavors = new List<DrinkFlavor>();
 
-    // --- NEW: Story Flags for Reactions! ---
     [Header("Story Conditions")]
-    [Tooltip("Leave empty if no flag is needed. Otherwise, type a flag like 'Rachel_Day2_Fail'")]
-    public string requiredStoryFlag;
-
-    [Tooltip("Type a flag here to skip this reaction if the player has the flag!")]
-    public string excludedStoryFlag;
+    // --- CHANGED: Now lists! ---
+    public List<string> requiredStoryFlags = new List<string>();
+    public List<string> excludedStoryFlags = new List<string>();
 
     [Header("The Outcome")]
     public int goldReward;
@@ -48,21 +43,16 @@ public class Topic
 {
     public string topicName;
 
-    // --- THE STORY LOCKS ---
     [Tooltip("Leave at 0 to show on ANY day. Set to 1 for Day 1, 5 for Day 5, etc.")]
     public int requiredDay = 0;
 
-    [Tooltip("Leave empty if no flag is needed. Otherwise, type a flag like 'Joe_Got_Pink'")]
-    public string requiredStoryFlag;
-
-    [Tooltip("Type a flag here to HIDE this topic if the player has the flag!")]
-    public string excludedStoryFlag;
+    // --- CHANGED: Now lists! ---
+    public List<string> requiredStoryFlags = new List<string>();
+    public List<string> excludedStoryFlags = new List<string>();
+    public List<string> flagsToSet = new List<string>();
 
     [Tooltip("Leave empty to show immediately. Type another topic's exact name here to lock this until that one is read!")]
     public string requiredPreviousTopic;
-
-    [Tooltip("If you type a word here, the game will permanently remember it after reading this topic!")]
-    public string flagToSet;
 
     public DialogueLine[] lines;
 }
@@ -74,6 +64,7 @@ public class CharacterData : ScriptableObject
     public string characterName;
 
     public Sprite defaultPortrait;
+    public Sprite worldSprite;
 
     [Tooltip("If this is filled, another character will walk in with them!")]
     public CharacterData companion;
@@ -82,7 +73,6 @@ public class CharacterData : ScriptableObject
     [Tooltip("The fallback dialogue that plays automatically if no conditionals match.")]
     public Topic greetingTopic;
 
-    // --- NEW: Conditional Greetings List ---
     [Tooltip("The game checks these top-to-bottom. It plays the first one with matching flags!")]
     public List<Topic> conditionalGreetings = new List<Topic>();
 

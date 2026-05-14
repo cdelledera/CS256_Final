@@ -41,10 +41,10 @@ public enum Potion
     SweetAndSpicy,       // Apple + Pepper
     PPAP,                // Pineapple + Apple
     SourApple,           // Lemon + Apple
-    CherryLemonade,      // Lemon + Cherry
+    SourCherry,      // Lemon + Cherry
     TropicalCitrus,      // Lemon + Pineapple
     DragonbiteCider,     // Apple + Dragonfruit
-    CrimsonWyrm,         // Cherry + Dragonfruit
+    RomanceSmoothie,     // Cherry + Dragonfruit
     FirecrackerMash,     // Cherry + Pepper
     SunsetJuice,         // Cherry + Pineapple
     DragonblazeSmoothie, // Dragonfruit + Pepper

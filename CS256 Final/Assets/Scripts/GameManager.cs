@@ -20,7 +20,9 @@ public class GameManager : MonoBehaviour
     [Tooltip("WARNING: Turn this OFF before building the final game!")]
     public bool enableDebugMode = false;
     public int testStartingDay = 1;
-    public List<string> testStartingFlags = new List<string>();
+
+    // --- ADDED NONREORDERABLE TO STOP THE CRASH ---
+    [NonReorderable] public List<string> testStartingFlags = new List<string>();
 
     [Header("UI References")]
     public TextMeshProUGUI goldTextUI;
@@ -38,10 +40,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI totalGoalText;
     public int dailyGoldTracker = 0;
 
-    public List<OrderRecord> todaysOrders = new List<OrderRecord>();
+    // --- ADDED NONREORDERABLE TO STOP THE CRASH ---
+    [NonReorderable] public List<OrderRecord> todaysOrders = new List<OrderRecord>();
 
     [Header("Story Memory")]
-    public List<string> storyFlags = new List<string>();
+    // --- ADDED NONREORDERABLE TO STOP THE CRASH ---
+    [NonReorderable] public List<string> storyFlags = new List<string>();
 
     public void AddStoryFlag(string flag)
     {
@@ -54,7 +58,6 @@ public class GameManager : MonoBehaviour
     }
 
     [Header("Win Conditions")]
-    // --- CHANGED: Scope lowered to 6 days! ---
     public int maxDays = 6;
     public int goalGold = 5000;
 
@@ -62,11 +65,8 @@ public class GameManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
-    }
 
-    void Start()
-    {
-        // --- APPLY DEBUG DATA IF ACTIVE ---
+        // --- FIXED: Move Debug Mode setup to Awake so it happens BEFORE any other scripts run! ---
         if (enableDebugMode)
         {
             currentDay = testStartingDay;
@@ -82,13 +82,16 @@ public class GameManager : MonoBehaviour
 
             Debug.Log($"<color=yellow>DEBUG MODE ACTIVE: Starting on Day {currentDay} with {storyFlags.Count} flags.</color>");
         }
+    }
 
+    void Start()
+    {
         endOfDayPanel.SetActive(false);
         UpdateGoldUI();
         UpdateTimeUI();
 
-        // --- AUDIO: START THE AFTERNOON MUSIC! ---
-        if (AudioManager.Instance != null)
+        // --- FIXED: Only play automatically if it is NOT Day 1! ---
+        if (currentDay > 1 && AudioManager.Instance != null)
         {
             AudioManager.Instance.PlayMusic("Afternoon_Theme");
         }

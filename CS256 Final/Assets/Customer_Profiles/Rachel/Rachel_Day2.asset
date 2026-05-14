@@ -13,189 +13,227 @@ MonoBehaviour:
   m_Name: Rachel_Day2
   m_EditorClassIdentifier: 
   characterName: Rachel
+  defaultPortrait: {fileID: -5786595987089991849, guid: 38cda2e6e16459646ac40035c7391584, type: 3}
+  worldSprite: {fileID: 4346901847619815257, guid: 38cda2e6e16459646ac40035c7391584, type: 3}
   companion: {fileID: 0}
   greetingTopic:
     topicName: Hiiiiii
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Hiiiiiii~
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: ...
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: "I\u2019ll have-"
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: You stole my wallet last week
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: Whaaaat? No way! I would never do such a thing!
       effect: 1
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: I watched you do it, you yoinked it out of my hands at the grocery store!
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: "Give it back or I\u2019m calling the guards."
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: The guards? Really? You want them knowing you sell-
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: You make a compelling argument! Back to business!
       effect: 1
+      bonusGold: 0
   conditionalGreetings: []
   availableTopics:
   - topicName: So, do you have a real job?
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: "What\u2019s that supposed to mean?! I\u2019ll have you know, theivery
         is a real job."
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: So you just live off the backs of others and call it work?
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: "A lot of work goes into it I\u2019ll have you know... It\u2019s a lot
         like bartending!"
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: You need to get a read on your targets, see where they are in life, and
         then get the job done fast!
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: "I feel like the \u201Cget the job done\u201D part is where we deviate..."
       effect: 0
+      bonusGold: 0
   - topicName: Are you paying?
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Of course I am! Nothing feels as good as buying a big fancy drink after
         a long day.
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: I like to feel like royalty~
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: "\u201CIt\u2019s barely past noon..."
       effect: 0
+      bonusGold: 0
   - topicName: What are you doing tonight?
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: Are you paying?
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Why? You interested?~
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: No! I just wanted to know how many extra locks I should put on the bar.
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: "Don\u2019t worry about it. The locks wouldn\u2019t do much anyway."
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: ...
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: Fine! If you must know, I will be doing a heist.
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: Where?
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: "Well I wouldn\u2019t want to ruin the surprise"
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: "But if I can outrun the cops and make it back here tomorrow, I\u2019ll
         tell you all about it~"
       effect: 0
+      bonusGold: 0
   - topicName: What do you want?
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: What are you doing tonight?
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Hmmm... not sure. Get me something tropical and tart. May as well treat
         myself~
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: Are you gonna pay me with my own money?
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: Nah, I spent that a while ago.
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: Of course you did...
       effect: 0
+      bonusGold: 0
   conditionalReactions:
   - branchName: Dragon King
     requiredPotions: 16000000
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
     goldReward: 250
     reactionTopic:
       topicName: Dragon King
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: "Oh yeah... this is the stuff... Thanks a lot, I\u2019ll definitely
           be back tomorrow!"
         effect: 0
+        bonusGold: 0
+    endInteraction: 1
   - branchName: Any Pineapple
     requiredPotions: 
     requiredEffects: 
     requiredFlavors: 03000000
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
     goldReward: 150
     reactionTopic:
       topicName: Any Pineapple
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: Not bad. Have a good one~
         effect: 0
+        bonusGold: 0
+    endInteraction: 1
   defaultFailReaction:
     topicName: Fail
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet:
+    - Rachel_Day2_Fail
     requiredPreviousTopic: 
-    flagToSet: Rachel_Day2_Fail
     lines:
     - speaker: {fileID: 11400000}
       text: ... This is crap...
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: Oops, maybe I- WAIT GET BACK HERE!
       effect: 0
+      bonusGold: 0
   failureGoldReward: 0
   companionPrefab: {fileID: 0}

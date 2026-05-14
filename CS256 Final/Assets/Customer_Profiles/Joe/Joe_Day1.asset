@@ -13,194 +13,234 @@ MonoBehaviour:
   m_Name: Joe_Day1
   m_EditorClassIdentifier: 
   characterName: Joe
-  defaultPortrait: {fileID: -357421434760999972, guid: 46b9fdace35095040afe6d70140628f8, type: 3}
+  defaultPortrait: {fileID: -184468096613323478, guid: 10b885a94511b214e80290ed46d48861, type: 3}
+  worldSprite: {fileID: -7568098519708548534, guid: 10b885a94511b214e80290ed46d48861, type: 3}
   companion: {fileID: 0}
   greetingTopic:
     topicName: Hey!
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Hey bartender!
       effect: 3
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: Hey.
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: One lemonade please!
       effect: 0
+      bonusGold: 0
   conditionalGreetings: []
   availableTopics:
   - topicName: You seem enthusiastic
     requiredDay: 1
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: "Well, it\u2019s almost a wonderful day."
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: Me and my wife are having our anniversary next week.
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: "Oh well, that\u2019s nice. How did the two of you meet?"
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: Oh well it was almost five years ago at this point.
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: "The two of us were at a mutual friend\u2019s housewarming party."
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
-      text: ' We stood in the corner together chatting about all sorts of things.
-        We had a drink bowl all to ourselves
-
-        as well.'
+      text: We stood in the corner together chatting about all sorts of things. We
+        had a drink bowl all to ourselves as well.
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: what drink was it? Lemonade?
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: No, but it was similar. I usually drink lemonade to remember that night
-        a little bit
+        a little bit.
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: The actual drink was pink and had a slightly suble taste to it.
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: I see...
       effect: 0
+      bonusGold: 0
   - topicName: So, what do you do?
     requiredDay: 1
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: You seem enthusiastic
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: "\u201CI\u2019m a berry farmer. I don\u2019t live all too far from this
         place..."
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: This place was a potion shop, right? I used to pass by it on my way to
         the general store
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: Yeahhh... I got a little screwed over by the new birds in charge
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: "Well, at least mixing drinks and mixing potions ain\u2019t all that
         different, right?"
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: you could say that.
       effect: 0
+      bonusGold: 0
   conditionalReactions:
   - branchName: Pink Lemonade
     requiredPotions: 08000000
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
     goldReward: 300
     reactionTopic:
       topicName: This is it!
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Joe_Got_Pink
       requiredPreviousTopic: 
-      flagToSet: Joe_Got_Pink
       lines:
       - speaker: {fileID: 11400000}
         text: This... no way...
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: It might not be what you wanted. Give it a shot.
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000}
         text: "*sip* \u201CIt is! This is the drink! I remember it like it was yesterday..."
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000}
         text: "What\u2019s it called?"
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: "... It\u2019s just pink lemonade..."
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000}
         text: ...What?
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: Yeah, it's lemonade but...pink and flavored up a little...
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000}
         text: ... Well now I just feel silly. Either way, this is absolutely wonderful.
           Thank you so much!
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: Really, don't mention it.
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000}
         text: As a token of my appreciation, I want you to have this.
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000}
         text: The best one of the harvest. I was going to eat it myself, but I think
           you earned it
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: Thanks, Joe. You have a nice day.
         effect: 0
+        bonusGold: 0
+    endInteraction: 1
   - branchName: Regular Order
     requiredPotions: 020000000d000000
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
     goldReward: 150
     reactionTopic:
       topicName: Regular Order Given
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: Thanks! This is real nice!
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: "It\u2019s just lemonade, I\u2019m not sure how much you should be
           congratulating me here..."
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000}
         text: Still, you make it well. I might come back another time.
         effect: 0
+        bonusGold: 0
       - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: Alright. You have a nice day.
         effect: 0
+        bonusGold: 0
+    endInteraction: 1
   defaultFailReaction:
     topicName: Fail
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: ... This is not at all what I ordered...
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: Oh...sorry.
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000}
       text: Could you take it back?
       effect: 0
+      bonusGold: 0
     - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: Fine...
       effect: 0
+      bonusGold: 0
   failureGoldReward: 0
   companionPrefab: {fileID: 0}

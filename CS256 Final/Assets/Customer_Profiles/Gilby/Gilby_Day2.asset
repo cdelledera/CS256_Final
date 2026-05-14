@@ -13,19 +13,38 @@ MonoBehaviour:
   m_Name: Gilby_Day2
   m_EditorClassIdentifier: 
   characterName: Gilby
+  defaultPortrait: {fileID: 2516868740424540249, guid: 821fe8bfca7d68346a9fa317b2b0c818, type: 3}
+  worldSprite: {fileID: -8707248912774404285, guid: 821fe8bfca7d68346a9fa317b2b0c818, type: 3}
   companion: {fileID: 0}
-  perfectDrinks: 0b0000000e00000011000000
-  perfectEffect: 3
-  bounty: 150
-  acceptableCategories: 
-  acceptableEffect: 3
+  greetingTopic:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines: []
+  conditionalGreetings: []
   availableTopics:
   - topicName: Your Order
-    requiredLilyState: 0
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
     requiredPreviousTopic: 
+    flagToSet: 
     lines:
     - speaker: {fileID: 0}
       text: 
-  reactionPerfect: Wow thanks!!
-  reactionOkay: um...ok
-  reactionFail: I am sad
+      effect: 0
+      bonusGold: 0
+  conditionalReactions: []
+  defaultFailReaction:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlag: 
+    excludedStoryFlag: 
+    requiredPreviousTopic: 
+    flagToSet: 
+    lines: []
+  failureGoldReward: 0
+  companionPrefab: {fileID: 0}

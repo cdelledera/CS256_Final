@@ -13,46 +13,26 @@ MonoBehaviour:
   m_Name: Rachel_Day3
   m_EditorClassIdentifier: 
   characterName: Rachel
-  defaultPortrait: {fileID: 0}
+  defaultPortrait: {fileID: -5786595987089991849, guid: 38cda2e6e16459646ac40035c7391584, type: 3}
+  worldSprite: {fileID: 4346901847619815257, guid: 38cda2e6e16459646ac40035c7391584, type: 3}
   companion: {fileID: 0}
   greetingTopic:
     topicName: 
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines: []
   conditionalGreetings:
-  - topicName: Speed Route (Success on Day 2)
-    requiredDay: 0
-    requiredStoryFlag: Rachel_Got_Speed
-    excludedStoryFlag: Rachel_Day2_Fail
-    requiredPreviousTopic: 
-    flagToSet: 
-    lines:
-    - speaker: {fileID: 11400000}
-      text: "Guess who\u2019s baaaack~"
-      effect: 2
-      bonusGold: 0
-    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
-      text: Great...
-      effect: 0
-      bonusGold: 0
-    - speaker: {fileID: 11400000}
-      text: "Oh you\u2019re no fun. Not even gonna ask about my day?"
-      effect: 0
-      bonusGold: 0
-    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
-      text: Just... sit down.
-      effect: 0
-      bonusGold: 0
   - topicName: Speed Route (Failed on Day 2)
     requiredDay: 0
-    requiredStoryFlag: Rachel_Got_Speed
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Rachel_Day2_Fail
+    - Rachel_Got_Speed
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: Rachel_Speed_Fail
     lines:
     - speaker: {fileID: 11400000}
       text: I'm back!
@@ -74,16 +54,43 @@ MonoBehaviour:
       text: "Well you didn\u2019t give me anything good... fine, here. We good?"
       effect: 0
       bonusGold: 0
-    - speaker: {fileID: 0}
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
       text: ... Fine. Sit down.
+      effect: 0
+      bonusGold: 0
+  - topicName: Speed Route (Success on Day 2)
+    requiredDay: 0
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags:
+    - Rachel_Day2_Fail
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "Guess who\u2019s baaaack~"
+      effect: 2
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Great...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Oh you\u2019re no fun. Not even gonna ask about my day?"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Just... sit down.
       effect: 0
       bonusGold: 0
   - topicName: Non-Speed Route (Failed on Day 2)
     requiredDay: 0
-    requiredStoryFlag: Rachel_Day2_Fail
-    excludedStoryFlag: Rachel_Got_Speed
+    requiredStoryFlags:
+    - Rachel_Day2_Fail
+    excludedStoryFlags:
+    - Rachel_Got_Speed
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Hey...
@@ -108,13 +115,14 @@ MonoBehaviour:
     - speaker: {fileID: 11400000}
       text: "Here\u2019s some compensation for running out on you yesterday."
       effect: 0
-      bonusGold: 150
+      bonusGold: 250
   - topicName: Non-Speed Route (Success on Day 2)
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: Rachel_Got_Speed
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Rachel_Got_Speed
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Hey...
@@ -139,10 +147,11 @@ MonoBehaviour:
   availableTopics:
   - topicName: So, how did the heist go?
     requiredDay: 0
-    requiredStoryFlag: Rachel_Got_Speed
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Another easy victory. That old hag had no idea what hit her~
@@ -182,36 +191,12 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: Why did you come back?
     requiredDay: 0
-    requiredStoryFlag: Rachel_Got_Speed
-    excludedStoryFlag: Rachel_Day2_Fail
+    requiredStoryFlags:
+    - Rachel_Day2_Fail
+    - Rachel_Got_Speed
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: So, how did the heist go?
-    flagToSet: 
-    lines:
-    - speaker: {fileID: 11400000}
-      text: "Well for one thing I told you I\u2019d tell you about the heist. I may
-        be a thief, but I keep my promises."
-      effect: 0
-      bonusGold: 0
-    - speaker: {fileID: 11400000}
-      text: "Plus, the drinks here are nice. I can\u2019t say no to something that
-        makes me feel good."
-      effect: 0
-      bonusGold: 0
-    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
-      text: Fair enough. You want the same thing again?
-      effect: 0
-      bonusGold: 0
-    - speaker: {fileID: 11400000}
-      text: Nah, I want something sweet so I can prolong the taste of my victory
-        last night~
-      effect: 0
-      bonusGold: 0
-  - topicName: Why did you come back?
-    requiredDay: 0
-    requiredStoryFlag: Rachel_Speed_Fail
-    excludedStoryFlag: 
-    requiredPreviousTopic: So, how did the heist go?
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: "Well for one thing I told you I\u2019d tell you about the heist. I may
@@ -240,12 +225,40 @@ MonoBehaviour:
         never seeing a payment from me."
       effect: 0
       bonusGold: 0
+  - topicName: Why did you come back?
+    requiredDay: 0
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags:
+    - Rachel_Day2_Fail
+    flagsToSet: []
+    requiredPreviousTopic: So, how did the heist go?
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "Well for one thing I told you I\u2019d tell you about the heist. I may
+        be a thief, but I keep my promises."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Plus, the drinks here are nice. I can\u2019t say no to something that
+        makes me feel good."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Fair enough. You want the same thing again?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Nah, I want something sweet so I can prolong the taste of my victory
+        last night~
+      effect: 0
+      bonusGold: 0
   - topicName: Any plans now?
     requiredDay: 0
-    requiredStoryFlag: Rachel_Got_Speed
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: Why did you come back?
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Well I need to sell my catch from last night.
@@ -265,10 +278,11 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: What do you want?
     requiredDay: 0
-    requiredStoryFlag: Rachel_Got_Speed
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: Any plans now?
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: "I need something with a good bit of spice in it. Nothing that\u2019ll
@@ -281,10 +295,11 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: What happend?
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: Rachel_Got_Speed
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Rachel_Got_Speed
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: I failed the heist...
@@ -370,10 +385,10 @@ MonoBehaviour:
       bonusGold: 0
   - topicName: What do you want?
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: Rachel_Got_Speed
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines:
     - speaker: {fileID: 11400000}
       text: Something sweet. I need a taste of my victory to motivate myself even
@@ -389,16 +404,18 @@ MonoBehaviour:
     requiredPotions: 09000000
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: Rachel_Speed_Fail
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    - Rachel_Day2_Fail
+    excludedStoryFlags: []
     goldReward: 350
     reactionTopic:
       topicName: 
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: Rachel_Drank_Hell
       lines:
       - speaker: {fileID: 11400000}
         text: "Alright let\u2019s see here..."
@@ -411,21 +428,24 @@ MonoBehaviour:
       - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: '*YOINK*~ thaaaat just about covers it.'
         effect: 0
-        bonusGold: 0
+        bonusGold: 400
+    endInteraction: 1
   - branchName: Hell In A Glass (Speed + Day2 standard)
     requiredPotions: 09000000
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: Rachel_Got_Speed
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags:
+    - Rachel_Day2_Fail
     goldReward: 350
     reactionTopic:
       topicName: 
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: Rachel_Drank_Hell
       lines:
       - speaker: {fileID: 11400000}
         text: "Alright let\u2019s see here..."
@@ -448,20 +468,22 @@ MonoBehaviour:
         text: "That\u2019s fair."
         effect: 1
         bonusGold: 0
+    endInteraction: 1
   - branchName: PPAP (NO SPEED)
     requiredPotions: 0b000000
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: 
-    excludedStoryFlag: Rachel_Got_Speed
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Rachel_Got_Speed
     goldReward: 500
     reactionTopic:
       topicName: PPAP
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: Here you go.
@@ -476,11 +498,11 @@ MonoBehaviour:
         text: It comes with the drink.
         effect: 0
         bonusGold: 0
-      - speaker: {fileID: 0}
+      - speaker: {fileID: 11400000}
         text: ... Wait seriously?
         effect: 0
         bonusGold: 0
-      - speaker: {fileID: 0}
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
         text: "Yep, says it right here in the bartender\u2019s manual."
         effect: 0
         bonusGold: 0
@@ -492,20 +514,22 @@ MonoBehaviour:
         text: Yep.
         effect: 0
         bonusGold: 0
+    endInteraction: 1
   - branchName: Sweet & Spicy (Speed Route)
     requiredPotions: 0a000000
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: Rachel_Got_Speed
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags: []
     goldReward: 500
     reactionTopic:
       topicName: Sweet & Spicy
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: Yep. This is exactly what I needed. You're so good to me~
@@ -515,20 +539,22 @@ MonoBehaviour:
         text: You're welcome.
         effect: 0
         bonusGold: 0
-  - branchName: Apple OR Pepper
+    endInteraction: 1
+  - branchName: Apple OR Pepper (SPEED)
     requiredPotions: 0300000004000000110000000c0000000b000000150000000f0000001300000014000000
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: Rachel_Got_Speed
-    excludedStoryFlag: 
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags: []
     goldReward: 150
     reactionTopic:
       topicName: Apple or Pepper
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: "I mean... It\u2019s alright. Here\u2019s your pay"
@@ -538,20 +564,22 @@ MonoBehaviour:
         text: "Don\u2019t get too excited now..."
         effect: 0
         bonusGold: 0
+    endInteraction: 1
   - branchName: SWEET(NO SPEED)
     requiredPotions: 
     requiredEffects: 
     requiredFlavors: 06000000
-    requiredStoryFlag: 
-    excludedStoryFlag: Rachel_Got_Speed
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Rachel_Got_Speed
     goldReward: 150
     reactionTopic:
       topicName: SWEET
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: "Thanks, I\u2019ll be on my way now! Hopefully next time I see you,
@@ -562,20 +590,23 @@ MonoBehaviour:
         text: "Sure... Please don\u2019t do anything stupid..."
         effect: 0
         bonusGold: 0
+    endInteraction: 1
   - branchName: FAIL A (SPEED + Day 2 Fail)
     requiredPotions: 
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: Rachel_Speed_Fail
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
     goldReward: 0
     reactionTopic:
       topicName: FAIL (SPEED + DAY2 Fail)
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Rachel_Got_Speed
+      - Rachel_Day2_Fail
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: "... I\u2019m not paying you until you get this right."
@@ -585,53 +616,58 @@ MonoBehaviour:
         text: NONONOWAIT-
         effect: 3
         bonusGold: 0
+    endInteraction: 1
   - branchName: FAIL B (SPEED + Day 2 Success)
     requiredPotions: 
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: Rachel_Got_Speed
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
     goldReward: 100
     reactionTopic:
       topicName: FAIL (SPEED + DAY2 Success)
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Rachel_Got_Speed
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: "Are you kidding me? This isn\u2019t at all what I asked for... Whatever,
           you helped a lot yesterday."
         effect: 0
         bonusGold: 0
+    endInteraction: 1
   - branchName: FAIL C (NO SPEED)
     requiredPotions: 
     requiredEffects: 
     requiredFlavors: 
-    requiredStoryFlag: 
-    excludedStoryFlag: Rachel_Got_Speed
+    requiredStoryFlags: []
+    excludedStoryFlags: []
     goldReward: 100
     reactionTopic:
       topicName: FAIL (NO SPEED)
       requiredDay: 0
-      requiredStoryFlag: 
-      excludedStoryFlag: 
+      requiredStoryFlags: []
+      excludedStoryFlags:
+      - Rachel_Got_Speed
+      flagsToSet: []
       requiredPreviousTopic: 
-      flagToSet: 
       lines:
       - speaker: {fileID: 11400000}
         text: "... Not the best I\u2019ve had, but I appreciate it anyway, here\u2019s
           a little something."
         effect: 0
         bonusGold: 0
+    endInteraction: 1
   defaultFailReaction:
     topicName: 
     requiredDay: 0
-    requiredStoryFlag: 
-    excludedStoryFlag: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
     requiredPreviousTopic: 
-    flagToSet: 
     lines: []
   failureGoldReward: 0
   companionPrefab: {fileID: 0}

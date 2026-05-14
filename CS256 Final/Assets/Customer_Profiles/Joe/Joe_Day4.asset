@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Joe_Day4
   m_EditorClassIdentifier: 
   characterName: Joe
-  defaultPortrait: {fileID: 0}
+  defaultPortrait: {fileID: -184468096613323478, guid: 10b885a94511b214e80290ed46d48861, type: 3}
+  worldSprite: {fileID: -7568098519708548534, guid: 10b885a94511b214e80290ed46d48861, type: 3}
   companion: {fileID: 0}
   greetingTopic:
     topicName: 

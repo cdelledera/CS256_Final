@@ -163,10 +163,10 @@ public class PotionBrewing : MonoBehaviour
                 else if (apple && cherry) brewed = Potion.AutumnChapple;
                 else if (dragon && pineapple) brewed = Potion.DragonKing;
                 else if (lemon && apple) brewed = Potion.SourApple;
-                else if (lemon && cherry) brewed = Potion.CherryLemonade;
+                else if (lemon && cherry) brewed = Potion.SourCherry;
                 else if (lemon && pineapple) brewed = Potion.TropicalCitrus;
                 else if (apple && dragon) brewed = Potion.DragonbiteCider;
-                else if (cherry && dragon) brewed = Potion.CrimsonWyrm;
+                else if (cherry && dragon) brewed = Potion.RomanceSmoothie;
                 else if (cherry && pepper) brewed = Potion.FirecrackerMash;
                 else if (cherry && pineapple) brewed = Potion.SunsetJuice;
                 else if (dragon && pepper) brewed = Potion.DragonblazeSmoothie;
