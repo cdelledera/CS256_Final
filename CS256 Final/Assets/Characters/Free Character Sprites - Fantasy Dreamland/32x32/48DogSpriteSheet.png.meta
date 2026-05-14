@@ -1,0 +1,1196 @@
+fileFormatVersion: 2
+guid: fe12de09b5337824ea9b869f40bcd789
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4903936456232446300
+    second: 48DogSpriteSheet_0
+  - first:
+      213: -1900499799315977454
+    second: 48DogSpriteSheet_1
+  - first:
+      213: -7013268983583154025
+    second: 48DogSpriteSheet_2
+  - first:
+      213: 892028884410297965
+    second: 48DogSpriteSheet_3
+  - first:
+      213: -2047557389139095489
+    second: 48DogSpriteSheet_4
+  - first:
+      213: -1424730749334698025
+    second: 48DogSpriteSheet_5
+  - first:
+      213: 8408023263608414934
+    second: 48DogSpriteSheet_6
+  - first:
+      213: -5936652540347054398
+    second: 48DogSpriteSheet_7
+  - first:
+      213: -3106405915475691975
+    second: 48DogSpriteSheet_8
+  - first:
+      213: -6400707161355791336
+    second: 48DogSpriteSheet_9
+  - first:
+      213: 7958656425301755502
+    second: 48DogSpriteSheet_10
+  - first:
+      213: -470846120294737524
+    second: 48DogSpriteSheet_11
+  - first:
+      213: -8336765186375716404
+    second: 48DogSpriteSheet_12
+  - first:
+      213: -3787775638548180437
+    second: 48DogSpriteSheet_13
+  - first:
+      213: -4856038239960886228
+    second: 48DogSpriteSheet_14
+  - first:
+      213: -1436007813984528778
+    second: 48DogSpriteSheet_15
+  - first:
+      213: -466151335960217638
+    second: 48DogSpriteSheet_16
+  - first:
+      213: -8781857525605139902
+    second: 48DogSpriteSheet_17
+  - first:
+      213: -1479756285050238883
+    second: 48DogSpriteSheet_18
+  - first:
+      213: -6351212624726725211
+    second: 48DogSpriteSheet_19
+  - first:
+      213: -2792993535225821421
+    second: 48DogSpriteSheet_20
+  - first:
+      213: -5073584034069599702
+    second: 48DogSpriteSheet_21
+  - first:
+      213: -7302910384038754911
+    second: 48DogSpriteSheet_22
+  - first:
+      213: 6195598658448653106
+    second: 48DogSpriteSheet_23
+  - first:
+      213: -8708430964584314428
+    second: 48DogSpriteSheet_24
+  - first:
+      213: -7317745884388323748
+    second: 48DogSpriteSheet_25
+  - first:
+      213: 707617156127567968
+    second: 48DogSpriteSheet_26
+  - first:
+      213: -1386322383365142040
+    second: 48DogSpriteSheet_27
+  - first:
+      213: 3898476762635738658
+    second: 48DogSpriteSheet_28
+  - first:
+      213: 219674413445576052
+    second: 48DogSpriteSheet_29
+  - first:
+      213: -4086256871595684710
+    second: 48DogSpriteSheet_30
+  - first:
+      213: 8972288116835103275
+    second: 48DogSpriteSheet_31
+  - first:
+      213: 7183800139997329084
+    second: 48DogSpriteSheet_32
+  - first:
+      213: -8174010358739893040
+    second: 48DogSpriteSheet_33
+  - first:
+      213: -4429906387063302058
+    second: 48DogSpriteSheet_34
+  - first:
+      213: 3276887949575670778
+    second: 48DogSpriteSheet_35
+  - first:
+      213: 8098431002477350298
+    second: 48DogSpriteSheet_36
+  - first:
+      213: -365448567339743128
+    second: 48DogSpriteSheet_37
+  - first:
+      213: -1580534731174551968
+    second: 48DogSpriteSheet_38
+  - first:
+      213: 2489211614045778368
+    second: 48DogSpriteSheet_39
+  - first:
+      213: -6745354318503464430
+    second: 48DogSpriteSheet_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 31
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a65d2576c7b1fbb0800000000000000
+      internalID: -4903936456232446300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21be116708110a5e0800000000000000
+      internalID: -1900499799315977454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 31
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 790e24f640ddbae90800000000000000
+      internalID: -7013268983583154025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 15
+        width: 14
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ee9a05b8f116c00800000000000000
+      internalID: 892028884410297965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 31
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f30532b276d9593e0800000000000000
+      internalID: -2047557389139095489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 15
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d744599ee65a3ce0800000000000000
+      internalID: -1424730749334698025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d2a9925c9c4fa470800000000000000
+      internalID: 8408023263608414934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 31
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c681b1e7f5cc9da0800000000000000
+      internalID: -5936652540347054398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 31
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93636ef3744d3e4d0800000000000000
+      internalID: -3106405915475691975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 15
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 814d618cfbe1c27a0800000000000000
+      internalID: -6400707161355791336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 31
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66cd7f1ad3d27e60800000000000000
+      internalID: 7958656425301755502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 15
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8916ffb2f73779f0800000000000000
+      internalID: -470846120294737524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 31
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc17b3aab3cdd4c80800000000000000
+      internalID: -8336765186375716404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 15
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22157f002e1f6bc0800000000000000
+      internalID: -3787775638548180437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 31
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c241b6bf2f2eb9cb0800000000000000
+      internalID: -4856038239960886228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 15
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67654c06086421ce0800000000000000
+      internalID: -1436007813984528778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 31
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7748864d5e789f0800000000000000
+      internalID: -466151335960217638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 31
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24af636db13902680800000000000000
+      internalID: -8781857525605139902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 15
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58cd63bf79d67be0800000000000000
+      internalID: -1479756285050238883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 31
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5adef2a94c5fbd7a0800000000000000
+      internalID: -6351212624726725211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 31
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31707e87d2b4d39d0800000000000000
+      internalID: -2792993535225821421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 15
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a2037b3320799b0800000000000000
+      internalID: -5073584034069599702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 15
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5cbdcb2b9d6aa90800000000000000
+      internalID: -7302910384038754911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23bf7b777203bf550800000000000000
+      internalID: 6195598658448653106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 15
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c980fc4d20752780800000000000000
+      internalID: -8708430964584314428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e0574a3e4227a90800000000000000
+      internalID: -7317745884388323748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 060b4fbed06f1d900800000000000000
+      internalID: 707617156127567968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 15
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e9095b232bc2cce0800000000000000
+      internalID: -1386322383365142040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e940ae5fb2a1630800000000000000
+      internalID: 3898476762635738658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4757aa317b07c0300800000000000000
+      internalID: 219674413445576052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c4a837603ba47c0800000000000000
+      internalID: -4086256871595684710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 15
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b223a6a4188f38c70800000000000000
+      internalID: 8972288116835103275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb631f97a2cf1b360800000000000000
+      internalID: 7183800139997329084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 12
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d402f0f2e4109e80800000000000000
+      internalID: -8174010358739893040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6589bd29c9fc582c0800000000000000
+      internalID: -4429906387063302058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 15
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afb473b7a38d97d20800000000000000
+      internalID: 3276887949575670778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_36
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 0
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d4ca4e618636070800000000000000
+      internalID: 8098431002477350298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_37
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8680a08d67aadeaf0800000000000000
+      internalID: -365448567339743128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_38
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 0
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06e5c293900d01ae0800000000000000
+      internalID: -1580534731174551968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_39
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 0
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c1b9f946c47b8220800000000000000
+      internalID: 2489211614045778368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 48DogSpriteSheet_40
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 0
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21234795cffa362a0800000000000000
+      internalID: -6745354318503464430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      48DogSpriteSheet_0: -4903936456232446300
+      48DogSpriteSheet_1: -1900499799315977454
+      48DogSpriteSheet_10: 7958656425301755502
+      48DogSpriteSheet_11: -470846120294737524
+      48DogSpriteSheet_12: -8336765186375716404
+      48DogSpriteSheet_13: -3787775638548180437
+      48DogSpriteSheet_14: -4856038239960886228
+      48DogSpriteSheet_15: -1436007813984528778
+      48DogSpriteSheet_16: -466151335960217638
+      48DogSpriteSheet_17: -8781857525605139902
+      48DogSpriteSheet_18: -1479756285050238883
+      48DogSpriteSheet_19: -6351212624726725211
+      48DogSpriteSheet_2: -7013268983583154025
+      48DogSpriteSheet_20: -2792993535225821421
+      48DogSpriteSheet_21: -5073584034069599702
+      48DogSpriteSheet_22: -7302910384038754911
+      48DogSpriteSheet_23: 6195598658448653106
+      48DogSpriteSheet_24: -8708430964584314428
+      48DogSpriteSheet_25: -7317745884388323748
+      48DogSpriteSheet_26: 707617156127567968
+      48DogSpriteSheet_27: -1386322383365142040
+      48DogSpriteSheet_28: 3898476762635738658
+      48DogSpriteSheet_29: 219674413445576052
+      48DogSpriteSheet_3: 892028884410297965
+      48DogSpriteSheet_30: -4086256871595684710
+      48DogSpriteSheet_31: 8972288116835103275
+      48DogSpriteSheet_32: 7183800139997329084
+      48DogSpriteSheet_33: -8174010358739893040
+      48DogSpriteSheet_34: -4429906387063302058
+      48DogSpriteSheet_35: 3276887949575670778
+      48DogSpriteSheet_36: 8098431002477350298
+      48DogSpriteSheet_37: -365448567339743128
+      48DogSpriteSheet_38: -1580534731174551968
+      48DogSpriteSheet_39: 2489211614045778368
+      48DogSpriteSheet_4: -2047557389139095489
+      48DogSpriteSheet_40: -6745354318503464430
+      48DogSpriteSheet_5: -1424730749334698025
+      48DogSpriteSheet_6: 8408023263608414934
+      48DogSpriteSheet_7: -5936652540347054398
+      48DogSpriteSheet_8: -3106405915475691975
+      48DogSpriteSheet_9: -6400707161355791336
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
