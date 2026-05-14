@@ -1,15 +1,17 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CustomerController : MonoBehaviour
 {
     public enum CustomerState { WalkingIn, Waiting, WalkingOut }
     public CustomerState currentState = CustomerState.WalkingIn;
+    [HideInInspector] public int pendingGold = 0;
 
     [Header("Data Profile")]
     public CharacterData myProfile;
     public PotionBrewing brewingSystem;
 
-    // NEW: Tracks if the customer has said their opening line yet
     [HideInInspector] public bool hasGreeted = false;
 
     [Header("Movement")]
@@ -17,25 +19,53 @@ public class CustomerController : MonoBehaviour
     public Transform doorLocation;
     public Transform counterLocation;
 
+    private GameObject spawnedCompanion;
+
+    void Start()
+    {
+        if (AudioManager.Instance != null) AudioManager.Instance.PlaySFX("CustomerSpawns");
+
+        SpriteRenderer myRenderer = GetComponent<SpriteRenderer>();
+        if (myRenderer != null && myProfile != null && myProfile.worldSprite != null)
+        {
+            myRenderer.sprite = myProfile.worldSprite;
+        }
+
+        if (myProfile.companionPrefab != null) SpawnCompanion();
+    }
+
+    void SpawnCompanion()
+    {
+        spawnedCompanion = Instantiate(myProfile.companionPrefab, transform.position, Quaternion.identity);
+        CompanionFollower follower = spawnedCompanion.GetComponent<CompanionFollower>();
+        if (follower != null)
+        {
+            follower.leader = this.transform;
+            follower.followSpeed = this.moveSpeed;
+        }
+    }
+
     void Update()
     {
         if (currentState == CustomerState.WalkingIn)
         {
             transform.position = Vector2.MoveTowards(transform.position, counterLocation.position, moveSpeed * Time.deltaTime);
-
-            if (Vector2.Distance(transform.position, counterLocation.position) < 0.1f)
-            {
-                currentState = CustomerState.Waiting;
-                // CHANGED: They now just stand there and wait for you to click them!
-            }
+            if (Vector2.Distance(transform.position, counterLocation.position) < 0.1f) currentState = CustomerState.Waiting;
         }
         else if (currentState == CustomerState.WalkingOut)
         {
             transform.position = Vector2.MoveTowards(transform.position, doorLocation.position, moveSpeed * Time.deltaTime);
 
+            if (spawnedCompanion != null)
+            {
+                CompanionFollower follower = spawnedCompanion.GetComponent<CompanionFollower>();
+                if (follower != null) follower.isWalkingOut = true;
+            }
+
             if (Vector2.Distance(transform.position, doorLocation.position) < 0.1f)
             {
-                GameManager.Instance.AdvanceTime();
+                if (spawnedCompanion != null) Destroy(spawnedCompanion);
+                FindFirstObjectByType<CustomerSpawner>().OnCustomerLeft();
                 Destroy(gameObject);
             }
         }
@@ -46,71 +76,153 @@ public class CustomerController : MonoBehaviour
         currentState = CustomerState.WalkingOut;
     }
 
-    // UPDATED: Now checks for a greeting before opening the Action Menu!
     void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
         if (currentState != CustomerState.Waiting || GameManager.Instance.isUIActive) return;
 
-        // If they have a greeting written AND they haven't said it yet...
-        if (!hasGreeted && myProfile.greetingTopic != null && myProfile.greetingTopic.lines != null && myProfile.greetingTopic.lines.Length > 0)
+        if (!hasGreeted)
         {
-            hasGreeted = true;
-            DialogueManager.Instance.StartGreeting(this, myProfile.greetingTopic);
+            Topic validGreeting = null;
+
+            if (myProfile.conditionalGreetings != null && myProfile.conditionalGreetings.Count > 0)
+            {
+                foreach (Topic t in myProfile.conditionalGreetings)
+                {
+                    bool dayMatch = (t.requiredDay == 0 || t.requiredDay == GameManager.Instance.currentDay);
+
+                    // --- CHANGED: List Logic ---
+                    bool flagMatch = true;
+                    foreach (string req in t.requiredStoryFlags) { if (!string.IsNullOrEmpty(req) && !GameManager.Instance.storyFlags.Contains(req)) flagMatch = false; }
+
+                    bool excludeMatch = true;
+                    foreach (string exc in t.excludedStoryFlags) { if (!string.IsNullOrEmpty(exc) && GameManager.Instance.storyFlags.Contains(exc)) excludeMatch = false; }
+
+                    if (dayMatch && flagMatch && excludeMatch)
+                    {
+                        validGreeting = t;
+                        break;
+                    }
+                }
+            }
+
+            if (validGreeting == null && myProfile.greetingTopic != null && myProfile.greetingTopic.lines != null && myProfile.greetingTopic.lines.Length > 0)
+            {
+                validGreeting = myProfile.greetingTopic;
+            }
+
+            if (validGreeting != null && validGreeting.lines != null && validGreeting.lines.Length > 0)
+            {
+                hasGreeted = true;
+                DialogueManager.Instance.StartGreeting(this, validGreeting);
+            }
+            else DialogueManager.Instance.OpenActionMenu(this);
         }
-        else
-        {
-            // Otherwise, just open the regular Action Menu
-            DialogueManager.Instance.OpenActionMenu(this);
-        }
+        else DialogueManager.Instance.OpenActionMenu(this);
     }
 
-    // NEW: The manager calls this when you specifically click "Present"
     public void ReceivePotion()
     {
-        // Ace Attorney Check: Do we actually have an item to present?
         if (brewingSystem.readyToServePotion == Potion.None)
         {
             DialogueManager.Instance.ShowInnerMonologue("(I haven't brewed a potion to give them yet...)");
             return;
         }
 
-        // 1. Grab the drink and the effect directly from the cauldron's memory!
         Potion givenPotion = brewingSystem.readyToServePotion;
         MagicEffect givenEffect = brewingSystem.readyToServeEffect;
 
-        // 2. Empty the cauldron!
         brewingSystem.readyToServePotion = Potion.None;
         brewingSystem.readyToServeEffect = MagicEffect.None;
 
-        // 3. Get the category (like Juice or Lemonade)
-        DrinkCategory givenCategory = PotionBrewing.GetCategory(givenPotion);
+        if (BrewingVisuals.Instance != null) BrewingVisuals.Instance.ClearGlassVisuals();
 
-        // --- NEW EVALUATION LOGIC ---
-        bool foundMatch = false;
+        string drinkName = PotionBrewing.GetDisplayName(givenPotion, givenEffect);
 
-        // Check the list of reactions from top to bottom
-        foreach (ReactionBranch branch in myProfile.conditionalReactions)
+        // =======================================================
+        // --- HARDCODED STORY MILESTONES ---
+        // =======================================================
+        if (myProfile.characterName == "Rachel" && GameManager.Instance.currentDay == 2)
         {
-            // NEW LOGIC: Check if the drink they brewed exists inside ANY of the lists for this branch!
-            bool potionMatches = branch.requiredPotions.Contains(givenPotion);
-            bool effectMatches = branch.requiredEffects.Contains(givenEffect);
-            bool categoryMatches = branch.requiredCategories.Contains(givenCategory);
+            // Speed check
+            if (givenEffect == MagicEffect.Speed) GameManager.Instance.AddStoryFlag("Rachel_Got_Speed");
 
-            // If ANY of those conditions are met, trigger this branch!
-            if (potionMatches || effectMatches || categoryMatches)
+            // Drink accuracy check
+            if (givenPotion == Potion.DragonKing)
             {
-                DialogueManager.Instance.ShowReaction(branch.reactionTopic);
-                GameManager.Instance.LogQuestResult(branch.goldReward);
-                foundMatch = true;
-                break; // Stop looking! We found the right reaction.
+                GameManager.Instance.AddStoryFlag("Rachel_Day2_Correct");
+                Debug.Log("System: Rachel got Day 2 correct!");
             }
         }
 
-        // If we checked the whole list and nothing matched, play the fail state
+        if (myProfile.characterName == "Rachel" && GameManager.Instance.currentDay == 3)
+        {
+            // Charisma Check
+            if (givenEffect == MagicEffect.Charisma)
+            {
+                //  Only give the Charisma flag IF she is already on the Speed route
+                if (GameManager.Instance.storyFlags.Contains("Rachel_Got_Speed"))
+                {
+                    GameManager.Instance.AddStoryFlag("Rachel_Charisma");
+                    Debug.Log("System: Rachel is on the Speed Route and drank Charisma!");
+                }
+            }
+
+        }
+
+        if (myProfile.characterName == "Joe" && GameManager.Instance.currentDay == 5)
+        {
+            if (givenEffect == MagicEffect.Speed)
+            {
+                GameManager.Instance.AddStoryFlag("Joe_Got_Speed");
+                Debug.Log("System: Joe drank Speed! Flag set automatically.");
+            }
+        }
+        // =======================================================
+
+        List<DrinkFlavor> givenFlavors = new List<DrinkFlavor>(brewingSystem.readyToServeFlavors);
+        bool foundMatch = false;
+
+        foreach (ReactionBranch branch in myProfile.conditionalReactions)
+        {
+            // --- CHANGED: List Logic ---
+            bool flagMatch = true;
+            foreach (string req in branch.requiredStoryFlags) { if (!string.IsNullOrEmpty(req) && !GameManager.Instance.storyFlags.Contains(req)) flagMatch = false; }
+
+            bool excludeMatch = true;
+            foreach (string exc in branch.excludedStoryFlags) { if (!string.IsNullOrEmpty(exc) && GameManager.Instance.storyFlags.Contains(exc)) excludeMatch = false; }
+
+            if (!flagMatch || !excludeMatch) continue;
+
+            bool requiresSpecificDrink = branch.requiredPotions.Count > 0 || branch.requiredEffects.Count > 0 || branch.requiredFlavors.Count > 0;
+            bool potionMatches = branch.requiredPotions.Contains(givenPotion);
+            bool effectMatches = branch.requiredEffects.Contains(givenEffect);
+
+            bool flavorMatches = false;
+            foreach (DrinkFlavor f in givenFlavors)
+            {
+                if (branch.requiredFlavors.Contains(f))
+                {
+                    flavorMatches = true;
+                    break;
+                }
+            }
+
+            if (!requiresSpecificDrink || potionMatches || effectMatches || flavorMatches)
+            {
+                DialogueManager.Instance.ShowReaction(branch.reactionTopic, branch.endInteraction);
+                pendingGold = branch.goldReward;
+                GameManager.Instance.RecordTransaction(myProfile.characterName, drinkName, branch.goldReward);
+                foundMatch = true;
+                break;
+            }
+        }
+
         if (!foundMatch)
         {
-            DialogueManager.Instance.ShowReaction(myProfile.defaultFailReaction);
-            GameManager.Instance.LogQuestResult(0); // 0 Gold for failing
+            DialogueManager.Instance.ShowReaction(myProfile.defaultFailReaction, true);
+            pendingGold = myProfile.failureGoldReward;
+            GameManager.Instance.RecordTransaction(myProfile.characterName, drinkName, myProfile.failureGoldReward);
         }
     }
 }

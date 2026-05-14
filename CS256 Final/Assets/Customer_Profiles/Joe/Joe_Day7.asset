@@ -1,0 +1,253 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Joe_Day7
+  m_EditorClassIdentifier: 
+  characterName: Joe
+  defaultPortrait: {fileID: -184468096613323478, guid: 10b885a94511b214e80290ed46d48861, type: 3}
+  worldSprite: {fileID: -7568098519708548534, guid: 10b885a94511b214e80290ed46d48861, type: 3}
+  companion: {fileID: 0}
+  greetingTopic:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines: []
+  conditionalGreetings:
+  - topicName: PINK
+    requiredDay: 0
+    requiredStoryFlags:
+    - Joe_Got_Pink
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Hey Joe. What are you doing here, isn\u2019t your anniversary tomorrow?"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Well, you did give me that fancy lemonade. I thought I\u2019d come by
+        to get something for me and my wife on our anniversary!"
+      effect: 0
+      bonusGold: 0
+  - topicName: NO PINK
+    requiredDay: 0
+    requiredStoryFlags:
+    - 
+    excludedStoryFlags:
+    - Joe_Got_Pink
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Hey Joe. What are you doing here, isn\u2019t your anniversary tomorrow?"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Well I was in the area so I thought it would be nice to bring some drinks
+        home.
+      effect: 0
+      bonusGold: 0
+  availableTopics:
+  - topicName: How were things?
+    requiredDay: 0
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags:
+    - Joe_Got_Speed
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: How were things after you left the other day?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "You won\u2019t believe this, but that raccoon woman stole my wallet!"
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I tried to outrun her, but she was too fast.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: No, I believe you... sorry to hear that.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Yeah... It\u2019s alright. I didn\u2019t have too much on me; I just
+        need to get a new wallet now."
+      effect: 0
+      bonusGold: 0
+  - topicName: How were things?
+    requiredDay: 0
+    requiredStoryFlags:
+    - Joe_Got_Speed
+    excludedStoryFlags:
+    - Rachel_Got_Speed
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: How were things after you left the other day?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "You won\u2019t believe this, but that raccoon woman tried to rob me!"
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: I believe it... what happened?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I felt a small burst of speed and I was just barely able to outrun her.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Heh... Nice.
+      effect: 0
+      bonusGold: 0
+  - topicName: How were things?
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Rachel_Got_Speed
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Not much. Me and that raccoon lady just had a quick chat before parting
+        ways.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Huh. Neat.
+      effect: 0
+      bonusGold: 0
+  - topicName: What can I get for you?
+    requiredDay: 0
+    requiredStoryFlags:
+    - Joe_Got_Pink
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: How were things?
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Just the best drink in this place so I can come home and relive some
+        memories with my wife!
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Alright. I\u2019ll get to it."
+      effect: 0
+      bonusGold: 0
+  - topicName: What can I get for you?
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Joe_Got_Pink
+    flagsToSet: []
+    requiredPreviousTopic: How were things?
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "I was hoping for two fancy lemonades to go if you don\u2019t mind."
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Alright. I\u2019ll get to it."
+      effect: 0
+      bonusGold: 0
+  conditionalReactions:
+  - branchName: PINK
+    requiredPotions: 08000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    goldReward: 300
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: "Thanks a ton!... I\u2019ve really appreciated the drinks."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "Tomorrow will be one of the best days I\u2019ve had in a while."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Happy anniversary, Joe.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: Lemon
+    requiredPotions: 02000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    goldReward: 200
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: "Thanks a ton!... I\u2019ve really appreciated the drinks."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: 'Tomorrow will be a real nice day.
+
+'
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Happy anniversary, Joe.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  defaultFailReaction:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Thanks... The drinks have been alright here.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I really wish this drink was something I wanted.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Happy anniversary, Joe.
+      effect: 0
+      bonusGold: 0
+  failureGoldReward: 0
+  companionPrefab: {fileID: 0}

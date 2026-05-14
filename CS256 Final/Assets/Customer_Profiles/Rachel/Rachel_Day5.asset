@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Rachel_Day5
+  m_EditorClassIdentifier: 
+  characterName: Rachel
+  defaultPortrait: {fileID: -5786595987089991849, guid: 38cda2e6e16459646ac40035c7391584, type: 3}
+  worldSprite: {fileID: 4346901847619815257, guid: 38cda2e6e16459646ac40035c7391584, type: 3}
+  companion: {fileID: 0}
+  greetingTopic:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines: []
+  conditionalGreetings: []
+  availableTopics: []
+  conditionalReactions: []
+  defaultFailReaction:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines: []
+  failureGoldReward: 0
+  companionPrefab: {fileID: 0}

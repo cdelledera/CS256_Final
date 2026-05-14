@@ -1,0 +1,330 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Lily_Day1
+  m_EditorClassIdentifier: 
+  characterName: Lily
+  defaultPortrait: {fileID: 6641995128204204009, guid: a826ee4b134a89a41a935a5406fa0fc3, type: 3}
+  worldSprite: {fileID: -2896292981050581210, guid: a826ee4b134a89a41a935a5406fa0fc3, type: 3}
+  companion: {fileID: 0}
+  greetingTopic:
+    topicName: Hello
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Morning
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: The sun is almost down.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Oh, I wasn\u2019t really looking up. So, how\u2019s the new business
+        treating you?"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "It\u2019s going well enough."
+      effect: 0
+      bonusGold: 0
+  conditionalGreetings: []
+  availableTopics:
+  - topicName: How are you?
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "How\u2019s the adventuring now that you can't get buffed as easy?"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I quit.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "... Lily, you know I\u2019m still-"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "I hate that your old business is illegal now, but that\u2019s not my
+        issue."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "The birds completely destroyed the adventurer\u2019s guild."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "What? How? Why?\u201D"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: They halted EVERY SINGLE COMMISSION.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Instead of actually doing anything helpful for the community, we need
+        to kill \u201CThe Monster\u201D\u201D"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "The Monster? Which one? Why the whole guild?\u201D"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I know just as much as you do. Nobody knows anything about it.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "We get paid hourly to go on what I can only assume is a snipe hunt.
+        I can\u2019t deal with that."
+      effect: 0
+      bonusGold: 0
+  - topicName: How's the apartment?
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: How are you?
+    lines:
+    - speaker: {fileID: 11400000}
+      text: The place is the same as ever. You should come over again some time;
+        I got that apple juice you like.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "As nice as that sounds, I\u2019ve been really busy lately. Maybe next
+        week."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Sounds good. I\u2019ll warn you though, two of stalker bird\u2019s guards
+        are posted outside."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: They yelled at me this morning for jaywalking. JAYWALKING! There were
+        no carriages coming.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Wow. That\u2019s ridiculous."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "I swear I need to beat them up when I get home... I\u2019m tired of
+        them."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Well let\u2019s not go too crazy..."
+      effect: 0
+      bonusGold: 0
+  - topicName: What can I get for you?
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: How's the apartment?
+    lines:
+    - speaker: {fileID: 11400000}
+      text: "eh, I\u2019ll go with a... You know what? I don\u2019t care; you make
+        good decisions. Give me whatever."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Really? You\u2019re putting a whole lot of trust in me."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Right now it\u2019s not the drink that matters, It\u2019s the real contents...
+        I need to be a bit tougher tonight."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Gotcha...
+      effect: 0
+      bonusGold: 0
+  conditionalReactions:
+  - branchName: Strength/Endurance Given
+    requiredPotions: 
+    requiredEffects: 0100000004000000
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    goldReward: 150
+    reactionTopic:
+      topicName: Endurance/Strength
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Lily_Fought
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Oh yeah... I can feel the kick already. My arms are tingling.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Please don't do anything that's going to get you thrown in a cell.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Please! If those feathered freaks look at me funny, they're getting
+          a face full of these fists!
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: You're outnumbered, Lily. Just be careful.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: I've taken on worse than a couple of glorified hall monitors. Thanks
+          for your help, here's your gold.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: Pondering Given
+    requiredPotions: 00000000
+    requiredEffects: 05000000
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    goldReward: 150
+    reactionTopic:
+      topicName: Pondering
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Lily_Pondered
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Wait... this isn't making my muscles tense up. My head feels... really
+          sharp.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: I thought maybe you needed a clear head more than a strong right hook
+          today.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Are you kidding me? I specifically asked to be-
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: ...
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: ...um uh nevermind.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Why don't you think it over Lily? I need all the regulars I can get
+          haha.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Very funny, but yeah, I at least need a plan. Thanks Pookie, here ya
+          go.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: Spicy Stuff
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 02000000
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    goldReward: 100
+    reactionTopic:
+      topicName: Spicy
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Lily_Lost
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: "Well, I should\u2019ve expected this. Bottoms up!"
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: I have no idea how you do it.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "I\u2019ve been eating spicy stuff since I was a kid. This is nothing."
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: Apple Juice
+    requiredPotions: 03000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    goldReward: 200
+    reactionTopic:
+      topicName: Apple Juice
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet:
+      - Lily_Lost
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: "Ha! I should\u2019ve known."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "You brought it up, I thought you\u2019d like it."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "You would be right. Here\u2019s your tip."
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  defaultFailReaction:
+    topicName: Thanks!
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet:
+    - Lily_Lost
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Thanks, have a good one!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: You too!
+      effect: 0
+      bonusGold: 0
+  failureGoldReward: 100
+  companionPrefab: {fileID: 0}

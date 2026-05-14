@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Steph_Day7
+  m_EditorClassIdentifier: 
+  characterName: Steph
+  defaultPortrait: {fileID: 4086981729899957000, guid: 3f9af0ec600d07f4481932f8dd2496f6, type: 3}
+  worldSprite: {fileID: -5099424975383025938, guid: 3f9af0ec600d07f4481932f8dd2496f6, type: 3}
+  companion: {fileID: 0}
+  greetingTopic:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines: []
+  conditionalGreetings: []
+  availableTopics: []
+  conditionalReactions: []
+  defaultFailReaction:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines: []
+  failureGoldReward: 0
+  companionPrefab: {fileID: 0}

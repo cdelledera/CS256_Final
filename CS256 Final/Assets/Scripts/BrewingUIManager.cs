@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class BrewingUIManager : MonoBehaviour
 {
@@ -18,14 +19,12 @@ public class BrewingUIManager : MonoBehaviour
     [Header("The Visual Slots")]
     public TextMeshProUGUI slot1Text;
     public TextMeshProUGUI slot2Text;
-
-    [Tooltip("This now acts as our Magic Effect scanner!")]
     public TextMeshProUGUI specialSlotText;
 
-    public PotionBrewing brewingSystem;
+    // --- NEW: The dedicated text for the Effect button! ---
+    public TextMeshProUGUI effectText;
 
-    // NEW: A single list that holds a maximum of 2 ingredients!
-    private List<IngredientData> currentIngredients = new List<IngredientData>();
+    public PotionBrewing brewingSystem;
 
     void Start()
     {
@@ -42,34 +41,64 @@ public class BrewingUIManager : MonoBehaviour
 
     public void CancelBrewing()
     {
+        if (AudioManager.Instance != null) AudioManager.Instance.PlaySFX("BrewMenuCancel");
         if (confirmPromptPanel != null) confirmPromptPanel.SetActive(false);
-        if (brewingMenuPanel != null) brewingMenuPanel.SetActive(false);
-        if (resultPanel != null) resultPanel.SetActive(false);
-        if (mainHUDPanel != null) mainHUDPanel.SetActive(true);
-        GameManager.Instance.isUIActive = false;
 
-        
+        if (MenuTransitionManager.Instance != null)
+        {
+            MenuTransitionManager.Instance.CloseBrewingMenu();
+        }
+        else
+        {
+            if (brewingMenuPanel != null) brewingMenuPanel.SetActive(false);
+            if (mainHUDPanel != null) mainHUDPanel.SetActive(true);
+        }
+
+        if (resultPanel != null) resultPanel.SetActive(false);
+
+        ClearCauldron();
+        GameManager.Instance.isUIActive = false;
     }
 
     public void OpenBrewingMenu()
     {
         confirmPromptPanel.SetActive(false);
-        brewingMenuPanel.SetActive(true);
+
+        if (MenuTransitionManager.Instance != null)
+        {
+            MenuTransitionManager.Instance.OpenBrewingMenu();
+        }
+        else
+        {
+            brewingMenuPanel.SetActive(true);
+            if (mainHUDPanel != null) mainHUDPanel.SetActive(false);
+        }
+
         resultPanel.SetActive(false);
         ClearCauldron();
-
         GameManager.Instance.isUIActive = true;
-        if (mainHUDPanel != null) mainHUDPanel.SetActive(false);
     }
 
     public void ClearCauldron()
     {
-        currentIngredients.Clear();
+        if (brewingSystem != null)
+        {
+            brewingSystem.currentIngredients.Clear();
+        }
+
         UpdateUI();
+
+        if (BrewingVisuals.Instance != null)
+        {
+            BrewingVisuals.Instance.ClearGlassVisuals();
+        }
+
+        if (EventSystem.current != null)
+        {
+            EventSystem.current.SetSelectedGameObject(null);
+        }
     }
 
-    // Since IngredientButton.cs still calls these two functions, 
-    // we keep them but point them both to the same logic!
     public void SelectBaseIngredient(IngredientData baseItem)
     {
         TryAddIngredient(baseItem);
@@ -82,78 +111,136 @@ public class BrewingUIManager : MonoBehaviour
 
     private void TryAddIngredient(IngredientData item)
     {
-        // Prevent adding if the pot is full (Max 2 ingredients)
-        if (currentIngredients.Count >= 2) return;
+        if (brewingSystem.TryAddIngredient(item))
+        {
+            if (AudioManager.Instance != null) AudioManager.Instance.PlaySFX("FruitSelect");
+            UpdateUI();
 
-        // Prevent adding the exact same fruit twice
-        if (currentIngredients.Contains(item)) return;
-
-        currentIngredients.Add(item);
-        UpdateUI();
+            
+            if (BrewingVisuals.Instance != null)
+            {
+                BrewingVisuals.Instance.DropIngredientIntoGlass(item);
+            }
+        }
     }
 
     private void UpdateUI()
     {
+        // 1. Reset all text to empty
         slot1Text.text = "Empty";
         slot2Text.text = "Empty";
-        specialSlotText.text = "Effect: None";
+        specialSlotText.text = "Empty";
 
-        if (currentIngredients.Count > 0) slot1Text.text = currentIngredients[0].ingredientName;
-        if (currentIngredients.Count > 1) slot2Text.text = currentIngredients[1].ingredientName;
+        if (effectText != null)
+        {
+            effectText.text = "Effect: None";
+            effectText.color = Color.white;
+        }
 
-        // --- THE MAGIC SCANNER ---
-        MagicEffect activeEffect = MagicEffect.None;
-        foreach (IngredientData item in currentIngredients)
+        int baseCount = 0;
+
+        // 2. Sort ingredients into the correct slots
+        foreach (IngredientData item in brewingSystem.currentIngredients)
         {
             if (item.effect != MagicEffect.None)
             {
-                activeEffect = item.effect;
+                // Slot 3 just gets the name now!
+                specialSlotText.text = item.ingredientName;
+
+                // The Effect button gets the actual effect text and color
+                if (effectText != null)
+                {
+                    effectText.text = "Effect: " + item.effect.ToString();
+                    effectText.color = GetEffectColor(item.effect);
+                }
+            }
+            else
+            {
+                if (baseCount == 0)
+                {
+                    slot1Text.text = item.ingredientName;
+                    baseCount++;
+                }
+                else if (baseCount == 1)
+                {
+                    slot2Text.text = item.ingredientName;
+                    baseCount++;
+                }
             }
         }
+    }
 
-        // Update the 3rd slot to show the magic!
-        if (activeEffect != MagicEffect.None)
+    // --- NEW: Helper function to assign colors to effects! ---
+    private Color GetEffectColor(MagicEffect effect)
+    {
+        switch (effect)
         {
-            specialSlotText.text = "Effect: " + activeEffect.ToString();
-            specialSlotText.color = Color.cyan; // Gives it a magical glow!
-        }
-        else
-        {
-            specialSlotText.text = "Effect: None";
-            specialSlotText.color = Color.white;
+            case MagicEffect.Strength:
+                return Color.red;
+
+            case MagicEffect.Speed:
+                return Color.cyan;
+
+            case MagicEffect.Healing:
+                return Color.yellow;
+
+            case MagicEffect.Endurance:
+                return new Color(1f, 0.5f, 0f);    // Orange
+
+            case MagicEffect.Pondering:
+                return new Color(0.6f, 0.2f, 0.8f);  // Purple
+
+            case MagicEffect.Charisma:
+                return new Color(1f, 0.4f, 0.7f);    // Pink
+
+            default:
+                return Color.white; // A safe fallback if an effect has no color assigned
         }
     }
 
     public void ConfirmBrew()
     {
-        if (currentIngredients.Count == 0) return;
-
-        // Dump everything into the actual Cauldron script
-        foreach (IngredientData item in currentIngredients)
-        {
-            brewingSystem.AddIngredient(item);
-        }
+        if (brewingSystem.currentIngredients.Count == 0) return;
 
         Potion craftedPotion = brewingSystem.Brew();
+
         resultPanel.SetActive(true);
 
-        // Updated to perfectly match your new "Slop" naming convention!
+        if (MenuTransitionManager.Instance != null)
+        {
+            MenuTransitionManager.Instance.CloseBrewingMenu();
+
+            if (MenuTransitionManager.Instance.mainHUD != null)
+            {
+                MenuTransitionManager.Instance.mainHUD.SetActive(false);
+            }
+        }
+
         if (craftedPotion == Potion.Slop)
         {
             resultText.text = "Failed!\nYou made Slop!";
         }
         else
         {
-            // If the drink has magic, we tell the player on the success screen!
-            MagicEffect effect = brewingSystem.readyToServeEffect;
-            string effectString = effect != MagicEffect.None ? $"\n(Magic: {effect})" : "";
-
-            resultText.text = "Success!\nYou brewed:\n" + PotionBrewing.GetDisplayName(craftedPotion) + effectString;
+            if (AudioManager.Instance != null) AudioManager.Instance.PlaySFX("DrinkMade");
+            resultText.text = "Success!\nYou brewed:\n" + PotionBrewing.GetDisplayName(craftedPotion, brewingSystem.readyToServeEffect);
         }
     }
 
     public void CollectPotionAndClose()
     {
-        CancelBrewing();
+        if (resultPanel != null) resultPanel.SetActive(false);
+
+        if (MenuTransitionManager.Instance != null && MenuTransitionManager.Instance.mainHUD != null)
+        {
+            MenuTransitionManager.Instance.mainHUD.SetActive(true);
+        }
+        else if (mainHUDPanel != null)
+        {
+            mainHUDPanel.SetActive(true);
+        }
+
+        ClearCauldron();
+        GameManager.Instance.isUIActive = false;
     }
 }

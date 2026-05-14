@@ -1,0 +1,441 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Lily_Day7
+  m_EditorClassIdentifier: 
+  characterName: Lily
+  defaultPortrait: {fileID: 6641995128204204009, guid: a826ee4b134a89a41a935a5406fa0fc3, type: 3}
+  worldSprite: {fileID: -2896292981050581210, guid: a826ee4b134a89a41a935a5406fa0fc3, type: 3}
+  companion: {fileID: 0}
+  greetingTopic:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines: []
+  conditionalGreetings:
+  - topicName: PONDERED + Charisma
+    requiredDay: 0
+    requiredStoryFlags:
+    - Lily_Pondered
+    - Lily_Charisma
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Good morning!
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Good morning. What are you doing up so early?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Well, tomorrow is the day the birds learn of our little project.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Our?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Well you may not be an official member, but you\u2019ve been incredibly
+        helpful."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Because of you, I was able to amass a really large group
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "With the information I got from Steph, I\u2019m confident that we can
+        win this."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: ... What can I get you to drink?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Give me hell in a glass and whatever you think will help in the fight.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: I got you.
+      effect: 0
+      bonusGold: 0
+  - topicName: PONDERED + NO Charisma
+    requiredDay: 0
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags:
+    - Lily_Charisma
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Good morning!
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Good morning. What are you doing up so early?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Well, tomorrow is the day the birds learn of our little project.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Our?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Well you may not be an official member, but you\u2019ve been incredibly
+        helpful."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Because of you, I managed to start this whole thing.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "With the information I got from Steph, I\u2019m confident that we can
+        win this."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: ...I hope
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: ... What can I get you to drink?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Give me hell in a glass and whatever you think will help in the fight.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: I got you.
+      effect: 0
+      bonusGold: 0
+  - topicName: SECRET YURI + PINK
+    requiredDay: 0
+    requiredStoryFlags:
+    - Secret_Yuri
+    - Joe_Got_Pink
+    excludedStoryFlags:
+    - Lily_Pondered
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Good morning!
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Good morning. What are you doing up so early?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Well, I will be taking Steph on a date tomorrow and I have a lot of prep
+        work to do!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Prep work?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "\u201CI bought a bunch of flowers and strawberries from Joe."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Thanks for being friends with him by the way, he said I can pay him later.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Anyway, once I\u2019m out of here, I\u2019m going to reserve us a spot
+        at the fancy restaurant down the street."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Then I\u2019ll get some fancy clothes, make myself look presentable
+        and all that."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Seems like you got it all figured out. I\u2019m happy for you."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Thanks. Anyway, I should be off. Can you get me one of those Romance
+        smoothies?
+      effect: 0
+      bonusGold: 0
+  - topicName: SECRET YURI + NO PINK
+    requiredDay: 0
+    requiredStoryFlags:
+    - Secret_Yuri
+    excludedStoryFlags:
+    - Lily_Pondered
+    - Joe_Got_Pink
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Good morning!
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Good morning. What are you doing up so early?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Well, I will be taking Steph on a date tomorrow and I have a lot of prep
+        work to do!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Prep work?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I bought a bunch of flowers and strawberries from Joe.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Hit me hard in the wallet but that\u2019s fine."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Anyway, once I\u2019m out of here, I\u2019m going to reserve us a spot
+        at the fancy restaurant down the street."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Then I\u2019ll get some fancy clothes, make myself look presentable
+        and all that."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Seems like you got it all figured out. I\u2019m happy for you."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Thanks. Anyway, I should be off. Can you get me one of those Romance
+        smoothies?
+      effect: 0
+      bonusGold: 0
+  - topicName: BAD ENDING
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    - Secret_Yuri
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: ... Hey.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Hey, did you find any- oh...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: '*SLAM*'
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Let me get you a drink...
+      effect: 1
+      bonusGold: 0
+  availableTopics: []
+  conditionalReactions:
+  - branchName: HELL (CORRECT)
+    requiredPotions: 09000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
+    goldReward: 300
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Whew... good stuff...
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Tomorrow is the day we get our lives back.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Good luck out there, Lily. Be safe.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: HELL (INCORRECT)
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags:
+    - Lily_Pondered
+    excludedStoryFlags: []
+    goldReward: 150
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: This'll do as well.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Tomorrow is the day we get our lives back.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Good luck out there, Lily. Be safe.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: ROMANCE (CORRECT)
+    requiredPotions: 10000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags:
+    - Secret_Yuri
+    excludedStoryFlags:
+    - Lily_Pondered
+    goldReward: 300
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Thanks... I really appreciate you for being my wing fella.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: 'I''m happy to help.
+
+'
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "Welp... I\u2019ll tell you how it went next time I see you."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "Tomorrow, I\u2019ll have a beautiful girlfriend..."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Good luck, Lily.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: ROMANCE(INCORRECT)
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags:
+    - Secret_Yuri
+    excludedStoryFlags:
+    - Lily_Pondered
+    goldReward: 100
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: ... It really pisses me off when you do this.
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Hehe... I know
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "Welp... I\u2019ll tell you how it went next time I see you."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "Tomorrow, I\u2019ll have a beautiful girlfriend..."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Good luck, Lily.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: BAD ENDING
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Lily_Pondered
+    - Secret_Yuri
+    goldReward: 0
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "Come on... You can rest in the back and I\u2019ll bring you to my
+          place when the shift is over."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Thank you.
+        effect: 1
+        bonusGold: 0
+    endInteraction: 1
+  defaultFailReaction:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines: []
+  failureGoldReward: 0
+  companionPrefab: {fileID: 0}

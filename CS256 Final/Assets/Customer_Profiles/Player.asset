@@ -13,24 +13,27 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   characterName: Pookie the Bartender
+  defaultPortrait: {fileID: -7993401586863369050, guid: 070b09b8e17610543a463577325abf8b, type: 3}
+  worldSprite: {fileID: 0}
   companion: {fileID: 0}
   greetingTopic:
     topicName: 
-    requiredLilyState: 0
     requiredDay: 0
     requiredStoryFlag: 
     excludedStoryFlag: 
     requiredPreviousTopic: 
     flagToSet: 
     lines: []
+  conditionalGreetings: []
   availableTopics: []
   conditionalReactions: []
   defaultFailReaction:
     topicName: 
-    requiredLilyState: 0
     requiredDay: 0
     requiredStoryFlag: 
     excludedStoryFlag: 
     requiredPreviousTopic: 
     flagToSet: 
     lines: []
+  failureGoldReward: 0
+  companionPrefab: {fileID: 0}

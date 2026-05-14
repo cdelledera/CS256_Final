@@ -1,0 +1,375 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Rachel_Day7
+  m_EditorClassIdentifier: 
+  characterName: Rachel
+  defaultPortrait: {fileID: -5786595987089991849, guid: 38cda2e6e16459646ac40035c7391584, type: 3}
+  worldSprite: {fileID: 4346901847619815257, guid: 38cda2e6e16459646ac40035c7391584, type: 3}
+  companion: {fileID: 0}
+  greetingTopic:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines: []
+  conditionalGreetings:
+  - topicName: SPEED + Pondered
+    requiredDay: 0
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    - Lily_Pondered
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Hey bartender~
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Who let you back in the bar?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Oh come on, I just wanted to say hi! You\u2019re fun to talk to!"
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "I\u2019ll pretend that was a compliment. Thank you."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: So, any plans?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Well, I\u2019ll be very busy soon."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Chaos and turmoil will be all over the forest tomorrow.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "When that happens, I\u2019ll be ready~ all those scared, unattended
+        wallets will be mine for the taking~"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: ... One of these days, that lifestyle is going to bite you back.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "But it hasn\u2019t yet~"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: How about you just get me a drink? Something sweet will do.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Sure. Why not?
+      effect: 0
+      bonusGold: 0
+  - topicName: SPEED + NO PONDER
+    requiredDay: 0
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags:
+    - Lily_Pondered
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Hey bartender~
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Who let you back in the bar?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Oh come on, I just wanted to say hi! You\u2019re fun to talk to!"
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "I\u2019ll pretend that was a compliment. Thank you."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: So, any plans?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: The usual. Rent is due at a lot of places and its really easy to snag
+        some good stuff off people who are getting evicted~
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: ...Oh my god that is genuinely evil...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Oh shove it.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: How about you just get me a drink? Something sweet will do.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Sure. Why not?
+      effect: 0
+      bonusGold: 0
+  - topicName: NO SPEED
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Rachel_Got_Speed
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Hey, bartender~
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Welcome back, Rachel. How is everything?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Oh, it\u2019s just wonderful!"
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I have my heist planned out start to finish, I got all the equipment
+        I need, now I just need to wait.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Are you really sure this is a good idea?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: I liked it when I thought you were getting a job.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "You know that\u2019s just not how I do things."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "I\u2019ll stop trying to convince you then... What are you waiting for?"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "There\u2019s gonna be a huge battle tomorrow! The perfect distraction~"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "That\u2019ll do it..."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Anyway, can I get a drink?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Of course, what do you want?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Get me something that will make me feel like royalty~
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Coming right up.
+      effect: 0
+      bonusGold: 0
+  availableTopics: []
+  conditionalReactions:
+  - branchName: SPEED + SWEET
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 06000000
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags: []
+    goldReward: 300
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Ah, the sweet taste of free stuff~
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "You\u2019re not stealing that drink, are you?"
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: No, it just gives me a reminder of what I'm going for.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "Tomorrow I\u2019ll have free stuff piled high as a mountain~"
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: ... I hope you get what you deserve, Rachel.
+        effect: 1
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: SPEED + WRONG
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags: []
+    goldReward: 100
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Really?
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Is there a problem?
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "... You know what? I\u2019m not letting this keep me down."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Tomorrow is my big payday~
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: ... I hope you get what you deserve, Rachel.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: NO SPEED + DRAGON KING
+    requiredPotions: 16000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Rachel_Got_Speed
+    goldReward: 300
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Oh yeah... This is the stuff...
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "Glad you\u2019re enjoying yourself."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "When I\u2019m done with that heist... It\u2019ll be nothing but good
+          drinks, good food, a comfy home..."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: "Sounds like quite the life... any ideas for what you\u2019ll be doing
+          then?"
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: That question comes later...
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Tomorrow, I get to be rich!
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Hehe... good luck, Rachel.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: NO SPEED + WRONG
+    requiredPotions: 
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Rachel_Got_Speed
+    goldReward: 300
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: ...hehe
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: What?
+        effect: 2
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: I'm sitting here with the wrong drink in front of me...But I don't
+          mind.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Well I appreciate that. Care to explain?
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "Today doesn\u2019t matter. Tomorrow is the day I get to be rich!"
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Of course... Good luck out there, Rachel.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  defaultFailReaction:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines: []
+  failureGoldReward: 0
+  companionPrefab: {fileID: 0}

@@ -1,0 +1,479 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc842acf67cf0cd42bc1b2a9906b2c37, type: 3}
+  m_Name: Joe_Day5
+  m_EditorClassIdentifier: 
+  characterName: Joe
+  defaultPortrait: {fileID: -184468096613323478, guid: 10b885a94511b214e80290ed46d48861, type: 3}
+  worldSprite: {fileID: -7568098519708548534, guid: 10b885a94511b214e80290ed46d48861, type: 3}
+  companion: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+  greetingTopic:
+    topicName: 
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines: []
+  conditionalGreetings:
+  - topicName: SPEED + CHARISMA
+    requiredDay: 0
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    - Rachel_Charisma
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Hello.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Back again already?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I was just on a shopping run, so I thought I'd stop by.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Hey, Rachel
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: Yo. What's that look for?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Don't even think about it.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "Whaaat?! I wasn\u2019t thinking about anything!"
+      effect: 3
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Joe, Move a seat over.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Huh? Alright...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "You\u2019re no fun."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: Oh! Also, I fetched a pretty good price for that item the other day.
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: What about it?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "Well, I could tell I was a bit extra charming, so here\u2019s a little
+        something extra."
+      effect: 0
+      bonusGold: 300
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Oh, thanks!
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "If you want, you can give me another one and I can try \u201Chaggling\u201D
+        with you~"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Stop.
+      effect: 0
+      bonusGold: 0
+  - topicName: SPEED + NO CHARISMA
+    requiredDay: 0
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags:
+    - Rachel_Charisma
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Hello.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Back again already?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I was just on a shopping run, so I thought I'd stop by.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Hey, Rachel
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: Yo. What's that look for?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Don't even think about it.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "Whaaat?! I wasn\u2019t thinking about anything!"
+      effect: 3
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Joe, Move a seat over.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Huh? Alright...
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "You\u2019re no fun."
+      effect: 0
+      bonusGold: 0
+  - topicName: NO SPEED
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Rachel_Got_Speed
+    - Rachel_Got_Charisma
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000}
+      text: Hello.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Back again already?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: I was just on a shopping run, so I thought I'd stop by.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Hey, Rachel.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: Yo. What's that look for?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Don't even think about it.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "Oh come on! I don\u2019t care about chump change any more. I just wanted
+        a drink."
+      effect: 3
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: Alright...
+      effect: 0
+      bonusGold: 0
+  availableTopics:
+  - topicName: So, Rachel, why are you here?
+    requiredDay: 0
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: Why do you think? I saw easy money. Not to mention a nice drink and a
+        good chat.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Oh, are you looking to work here? I didn\u2019t see a help wanted sign..."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "Yeah... let\u2019s go with that. I just love the idea of sitting behind
+        a failing bar all day."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "Hey, that\u2019s really not a nice thing to say!"
+      effect: 3
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "Well it hasn\u2019t been great, but I wouldn\u2019t say failing..."
+      effect: 0
+      bonusGold: 0
+  - topicName: What can I get you?
+    requiredDay: 0
+    requiredStoryFlags:
+    - Rachel_Got_Speed
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: So, Rachel, why are you here?
+    lines:
+    - speaker: {fileID: 11400000}
+      text: The usual please.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "You know what? Get me this guy\u2019s usual. I\u2019m going to judge
+        his taste in drinks."
+      effect: 0
+      bonusGold: 0
+  - topicName: What have you been doing Rachel?
+    requiredDay: 0
+    requiredStoryFlags:
+    - 
+    excludedStoryFlags:
+    - Rachel_Got_Speed
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "Well, I\u2019ve been mapping out the birdhouse all day. "
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: The birdhouse? Are you insane???
+      effect: 3
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "I think I found pretty much every weak spot they have... it\u2019s not
+        many, but it\u2019s enough."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "I\u2019ll admit, the work has been exhausting. I could use some extra
+        energy about now."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: "No! We are not glossing over that, what do you mean you\u2019re mapping
+        the birdhouse???\u201D"
+      effect: 3
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: Enough for what? Oh, are you an insurance lady?
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "Insurance? Jeez, I\u2019m not THAT much of a thief..."
+      effect: 1
+      bonusGold: 0
+    - speaker: {fileID: 0}
+      text: "I'm sorry, I shouldn\u2019t have assumed. What do you do for a living?"
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: Nothing you should be worrying about~
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+      text: I am incredibly worried about this!
+      effect: 0
+      bonusGold: 0
+  - topicName: What can I get for you?
+    requiredDay: 0
+    requiredStoryFlags:
+    - 
+    excludedStoryFlags:
+    - Rachel_Got_Speed
+    flagsToSet: []
+    requiredPreviousTopic: What have you been doing Rachel?
+    lines:
+    - speaker: {fileID: 11400000}
+      text: The usual please.
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "You know what? Get me this guy\u2019s usual. I\u2019m going to judge
+        his taste in drinks."
+      effect: 0
+      bonusGold: 0
+  conditionalReactions:
+  - branchName: PINK LEMON + WANTS
+    requiredPotions: 08000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags:
+    - Joe_Got_Pink
+    excludedStoryFlags: []
+    goldReward: 300
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Thanks a lot!
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+        text: Good choice.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: LEMON + WANTS
+    requiredPotions: 02000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags:
+    - Joe_Got_Pink
+    goldReward: 200
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags: []
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Thanks a lot!
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+        text: Good choice.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: PINK LEMONADE FIRST TIME
+    requiredPotions: 08000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    goldReward: 300
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags:
+      - Joe_Got_Pink
+      flagsToSet:
+      - Joe_Got_Pink
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Wait... Hey this is that drink I mentioned a while back!
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+        text: uh... not your usual?
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "It\u2019s a long story, but I\u2019ve been looking to get this for
+          a while! What's it called?"
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Pink lemonade.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: ... Well now I just feel silly.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Nah, there are a lot of-
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+        text: HAHAHAHAHAHAHAHA!!!!! What an IDIOT!
+        effect: 3
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Rachel, be nice!
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: Well aside from that, thank you for giving this to me. I appreciate
+          it.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  - branchName: LEMON + WANTS PINK
+    requiredPotions: 02000000
+    requiredEffects: 
+    requiredFlavors: 
+    requiredStoryFlags:
+    - Joe_Got_Pink
+    excludedStoryFlags: []
+    goldReward: 100
+    reactionTopic:
+      topicName: 
+      requiredDay: 0
+      requiredStoryFlags: []
+      excludedStoryFlags:
+      - Joe_Got_Pink
+      flagsToSet: []
+      requiredPreviousTopic: 
+      lines:
+      - speaker: {fileID: 11400000}
+        text: Oh... Out of the good stuff?
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Yeah, out of pink.
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000}
+        text: "Ah, that\u2019s fine."
+        effect: 0
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+        text: "Woah! Are you really scamming us out of the good stuff? That\u2019s
+          messed up."
+        effect: 1
+        bonusGold: 0
+      - speaker: {fileID: 11400000, guid: a117d69041774e64883c4a1f3ddec85b, type: 2}
+        text: Drink your lemonade, Rachel.
+        effect: 0
+        bonusGold: 0
+    endInteraction: 1
+  defaultFailReaction:
+    topicName: WRONG
+    requiredDay: 0
+    requiredStoryFlags: []
+    excludedStoryFlags: []
+    flagsToSet: []
+    requiredPreviousTopic: 
+    lines:
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "... huh... I didn\u2019t think you\u2019d like this kinda drink."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000}
+      text: "I don\u2019t... this isn't my usual."
+      effect: 0
+      bonusGold: 0
+    - speaker: {fileID: 11400000, guid: 2b89243ca6e1b854f881316fd5e34fb9, type: 2}
+      text: "Are you kidding me?! Come on, let\u2019s get out of here."
+      effect: 1
+      bonusGold: 0
+  failureGoldReward: 50
+  companionPrefab: {fileID: 3314336558410607469, guid: c912f4233b391c843a372d2a23971ea8, type: 3}
